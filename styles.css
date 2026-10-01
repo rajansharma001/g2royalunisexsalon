@@ -1626,6 +1626,32 @@ input:focus, select:focus, textarea:focus {
   border-color: rgb(255 255 255 / 0.1);
 }
 
+
+
+/* ==========================================================================
+   HEADER-HERO GAP FIX
+   ========================================================================== */
+/* Header padding matches fixed nav height exactly */
+#mainStickyHeader {
+  padding-bottom: 74px;
+}
+@media (max-width: 640px) {
+  #mainStickyHeader {
+    padding-bottom: 70px;
+  }
+}
+
+/* First section after header (hero) - no extra top padding */
+#mainStickyHeader + section:first-of-type,
+header + section:first-of-type {
+  padding-top: 0 !important;
+}
+
+/* Page hero on other pages */
+.page-hero {
+  padding-top: 0 !important;
+}
+
 /* ==========================================================================
    STICKY HEADER & BACK-TO-TOP ENHANCEMENTS
    ========================================================================== */
