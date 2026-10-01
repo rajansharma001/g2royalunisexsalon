@@ -1630,28 +1630,40 @@ input:focus, select:focus, textarea:focus {
 
 
 
+
+
 /* ==========================================================================
-   HERO SECTION GAP FIX - Floating elements & border
+   HERO GAP ELIMINATION - Aggressive fix
    ========================================================================== */
-/* Remove border from hero section to eliminate faint white line */
-#hero.section {
-  border-bottom: none;
+/* Override .section border for hero - must come after .section rule */
+#hero {
+  border-bottom: 0 !important;
+  padding-bottom: clamp(1rem, 3vw, 2rem) !important;
+  margin-bottom: 0 !important;
 }
 
-/* Ensure hero floating elements don't create layout gaps */
-#hero .hero-float-secondary,
+/* Floating elements - ensure they don't create visual gaps */
+#hero .hero-float-secondary {
+  bottom: -1.5rem; /* -bottom-6 */
+  left: -1.5rem;   /* -left-6 */
+  pointer-events: none;
+}
 #hero .hero-seal-float {
+  top: -1.25rem;   /* -top-5 */
+  right: -1rem;    /* -right-4 */
   pointer-events: none;
 }
 
-/* Tighten hero section bottom padding - the floating elements extend beyond */
-#hero.section {
-  padding-bottom: clamp(2rem, 5vw, 4rem);
+/* Fact panels - remove top margin since hero handles spacing */
+#hero + .mt-14,
+#hero + div.mt-14 {
+  margin-top: 0 !important;
 }
 
-/* Next section after hero - remove extra top margin if present */
+/* Next section after hero - no extra space */
 #hero + .section {
-  margin-top: 0;
+  margin-top: 0 !important;
+  padding-top: clamp(2rem, 5vw, 4rem) !important;
 }
 
 
