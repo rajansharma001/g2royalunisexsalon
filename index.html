@@ -1,0 +1,2477 @@
+﻿<!doctype html>
+<html lang="en" class="scroll-smooth" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      G2 Royal Unisex Salon &amp; Training Academy | Bafal, Kathmandu
+    </title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { darkMode: "class" };
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome 6 Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="icon" type="image/png" href="logo.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Master Shell -->
+    <div class="w-full min-h-screen flex flex-col overflow-x-clip">
+      <!-- STICKY MASTER HEADER (ONLY NAV IS STICKY) -->
+      <header id="mainStickyHeader" class="w-full transition-all duration-300">
+        <!-- 1. UTILITY ANNOUNCEMENT BAR -->
+        <div
+          class="top-strip ink-chrome w-full bg-[#121316] text-[#94a3b8] text-xs py-2 border-b border-white/10 hidden sm:block"
+        >
+          <div
+            class="luxury-container flex flex-wrap items-center justify-between gap-3"
+          >
+            <div class="flex items-center space-x-2">
+              <i class="fa-regular fa-clock text-[#d4af37]"></i>
+              <span class="text-white/90 font-medium tracking-wide">
+                Open until 8:30 PM (Around 7:00 AM â€“ 8:30 PM)
+                <span class="text-white/35 mx-1">|</span> near Chakhu Mandir,
+                Bafal Marg, Kathmandu
+              </span>
+            </div>
+
+            <div class="flex items-center space-x-5">
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=G2+Royal+Unisex+Salon+%26+Training+Academy%2C+near+Chakhu+Mandir%2C+Bafal+Marg%2C+Kathmandu%2C+Bagmati+Province+44600%2C+Nepal"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:text-white transition-colors flex items-center gap-1.5 text-white/80"
+              >
+                <i class="fa-solid fa-diamond-turn-right text-[#d4af37]"></i>
+                <span>Directions</span>
+              </a>
+              <button
+                id="openReservationHeaderBtn"
+                class="hover:text-white transition-colors flex items-center gap-1.5 group cursor-pointer"
+              >
+                <i
+                  class="fa-regular fa-calendar-check text-[#d4af37] group-hover:scale-110 transition-transform"
+                ></i>
+                <span class="text-white/90 group-hover:text-white font-medium"
+                  >Book Appointment</span
+                >
+              </button>
+              <a
+                href="tel:+9779742931920"
+                class="hover:text-[#d4af37] text-white/95 transition-colors font-semibold flex items-center gap-1.5"
+              >
+                <i class="fa-solid fa-phone text-[#d4af37] text-[11px]"></i>
+                <span>974-2931920</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. NAVBAR (STICKY) -->
+        <nav
+          class="site-nav sticky top-0 z-50 w-full border-b-2 border-[#d4af37]"
+        >
+          <div
+            class="luxury-container py-2.5 flex items-center justify-between"
+          >
+            <a
+              href="index.html"
+              class="flex items-center group py-1"
+              aria-label="G2 Royal Home"
+            >
+              <img
+                src="logo.png"
+                alt="G2 Royal logo"
+                width="222"
+                height="168"
+                class="h-11 w-auto object-contain transition-transform group-hover:scale-105"
+              />
+            </a>
+
+            <div
+              class="site-nav-links hidden lg:flex items-center space-x-7 text-xs font-bold tracking-wider uppercase"
+            >
+              <a
+                href="index.html"
+                class="text-[#d4af37] border-b-2 border-[#d4af37] py-1"
+                >Home</a
+              >
+              <a
+                href="about.html"
+                class="hover:text-[#b8891f] transition-colors py-1"
+                >About Us</a
+              >
+              <a
+                href="services.html"
+                class="hover:text-[#b8891f] transition-colors py-1"
+                >Services</a
+              >
+              <a
+                href="academy.html"
+                class="hover:text-[#b8891f] transition-colors py-1"
+                >Academy</a
+              >
+              <a
+                href="gallery.html"
+                class="hover:text-[#b8891f] transition-colors py-1"
+                >Gallery</a
+              >
+              <a
+                href="contact.html"
+                class="hover:text-[#b8891f] transition-colors py-1"
+                >Contact &amp; Book</a
+              >
+            </div>
+
+            <div class="flex items-center space-x-3">
+              <button
+                id="themeToggle"
+                type="button"
+                aria-label="Switch to dark mode"
+                class="w-9 h-9 rounded-md border border-[#2a2e36] text-[#94a3b8] hover:text-[#d4af37] hover:border-[#d4af37] transition-colors flex items-center justify-center"
+              >
+                <i class="fa-solid fa-moon text-xs"></i>
+              </button>
+              <button id="navBookBtn" class="btn btn-primary btn-sm">
+                <span>Book Appointment</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+
+              <button
+                id="mobileMenuToggle"
+                class="lg:hidden w-9 h-9 rounded-md border flex items-center justify-center transition-colors"
+                aria-label="Toggle navigation"
+              >
+                <i class="fa-solid fa-bars-staggered text-base"></i>
+              </button>
+            </div>
+          </div>
+
+          <div
+            id="mobileMenu"
+            class="hidden lg:hidden border-b px-6 py-4 space-y-3 text-xs font-bold tracking-wider uppercase shadow-xl"
+          >
+            <a href="index.html" class="block py-1 text-[#d4af37]">Home</a>
+            <a href="about.html" class="block py-1 hover:text-[#b8891f]"
+              >About Us</a
+            >
+            <a href="services.html" class="block py-1 hover:text-[#b8891f]"
+              >Services</a
+            >
+            <a href="academy.html" class="block py-1 hover:text-[#b8891f]"
+              >Academy</a
+            >
+            <a href="gallery.html" class="block py-1 hover:text-[#b8891f]"
+              >Gallery</a
+            >
+            <a href="contact.html" class="block py-1 hover:text-[#b8891f]"
+              >Contact &amp; Book</a
+            >
+          </div>
+        </nav>
+      </header>
+
+      <!-- HERO BANNER -->
+      <section class="section section-dark orn-razor" id="hero">
+        <div class="luxury-container">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center"
+          >
+            <div class="lg:col-span-6 flex flex-col justify-center">
+              <span
+                class="text-xs font-bold uppercase tracking-widest text-[#d4af37] mb-2 block"
+                >Beauty Salon &amp; Skills-Training Academy</span
+              >
+              <h1
+                class="hero-title text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#f8fafc] mb-5"
+              >
+                Everyday Salon Care &amp;<br />
+                <span class="accent text-[#d4af37]"
+                  >Hands-On Beauty Training</span
+                >
+              </h1>
+
+              <p
+                class="hero-lede text-base sm:text-lg text-[#94a3b8] leading-relaxed max-w-xl mb-6"
+              >
+                G2 Royal Unisex Salon &amp; Training Academy is a beauty salon
+                and skills-training business in the Bafal area of Kathmandu,
+                near Chakhu Mandir. We combine everyday salon services with
+                practical beauty and grooming education, serving both personal
+                care clients and students interested in professional training.
+              </p>
+
+              <div class="h-[2px] w-20 bg-[#d4af37] mb-7"></div>
+
+              <div class="flex flex-wrap items-center gap-3">
+                <button id="heroBookBtn" class="btn btn-primary shadow-xl">
+                  <i class="fa-regular fa-calendar-check mr-2"></i>
+                  <span>Book Appointment</span>
+                </button>
+
+                <a
+                  href="https://www.google.com/maps/dir/?api=1&destination=G2+Royal+Unisex+Salon+%26+Training+Academy%2C+near+Chakhu+Mandir%2C+Bafal+Marg%2C+Kathmandu%2C+Bagmati+Province+44600%2C+Nepal"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-outline"
+                >
+                  <i class="fa-solid fa-diamond-turn-right text-xs mr-2"></i>
+                  <span>Directions</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="lg:col-span-6 relative mt-10 lg:mt-0">
+              <div
+                class="absolute -inset-6 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.18),transparent_65%)] pointer-events-none -z-10"
+              ></div>
+
+              <div class="relative max-w-[460px] mx-auto lg:ml-auto">
+                <div
+                  class="absolute -top-3.5 -left-3.5 w-24 h-24 border-t-2 border-l-2 border-[#d4af37]/70 pointer-events-none z-10"
+                ></div>
+                <div
+                  class="absolute -bottom-3.5 -right-3.5 w-24 h-24 border-b-2 border-r-2 border-[#d4af37]/70 pointer-events-none z-10"
+                ></div>
+
+                <div
+                  class="hero-float-primary aspect-[4/5] rounded-t-full rounded-b-2xl overflow-hidden bg-[#121316] border-2 border-[#d4af37] shadow-[0_25px_50px_rgba(0,0,0,0.85)] relative group"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=800&q=80"
+                    alt="Haircut and grooming client"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-[#0e0f12]/60 via-transparent to-transparent"
+                  ></div>
+                </div>
+
+                <div
+                  class="hero-float-secondary absolute -bottom-6 -left-6 sm:-left-10 w-44 sm:w-52 aspect-[3/4] rounded-xl overflow-hidden bg-[#121316] border-2 border-[#d4af37]/80 shadow-[0_25px_50px_rgba(0,0,0,0.9)] z-20 group"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=500&q=80"
+                    alt="Hair coloring and styling session"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"
+                  ></div>
+                </div>
+
+                <div
+                  class="hero-seal-float absolute -top-5 -right-4 sm:-right-8 w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-[#121316] border-2 border-[#d4af37] flex flex-col items-center justify-center text-center p-2 shadow-2xl z-20 hover:rotate-12 transition-transform duration-500"
+                >
+                  <i
+                    class="fa-solid fa-scissors text-[#d4af37] text-base mb-1"
+                  ></i>
+                  <span
+                    class="text-[9px] font-bold uppercase tracking-widest text-[#d4af37] leading-none"
+                    >G2 ROYAL</span
+                  >
+                  <span
+                    class="text-[8px] uppercase tracking-wider text-white/70 mt-0.5"
+                    >BAFAL</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Numbered fact panels -->
+          <div class="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5">
+            <div class="fact-card">
+              <span class="index-num">01</span>
+              <div
+                class="text-xs sm:text-sm text-white/85 font-medium leading-snug pt-1"
+              >
+                Unisex Salon Care<br /><span class="text-white/55 font-normal"
+                  >Hair, Beard &amp; Beauty</span
+                >
+              </div>
+            </div>
+
+            <div class="fact-card">
+              <span class="index-num">02</span>
+              <div
+                class="text-xs sm:text-sm text-white/85 font-medium leading-snug pt-1"
+              >
+                Hands-On Training<br /><span class="text-white/55 font-normal"
+                  >Working Salon Floor</span
+                >
+              </div>
+            </div>
+
+            <div class="fact-card">
+              <span class="index-num">03</span>
+              <div
+                class="text-xs sm:text-sm text-white/85 font-medium leading-snug pt-1"
+              >
+                Open until 8:30 PM<br /><span class="text-white/55 font-normal"
+                  >7:00 AM â€“ 8:30 PM</span
+                >
+              </div>
+            </div>
+
+            <div class="fact-card">
+              <span class="index-num">04</span>
+              <div
+                class="text-xs sm:text-sm text-white/85 font-medium leading-snug pt-1"
+              >
+                Near Chakhu Mandir<br /><span class="text-white/55 font-normal"
+                  >Bafal Marg, Kathmandu</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 1. SERVICES (NO PRICES, NO EXPERIENCED STAFF TEXT) -->
+      <section id="services" class="section section-light orn-scissors">
+        <div class="luxury-container">
+          <div class="section-head is-split">
+            <div class="section-head-text">
+              <p class="eyebrow">
+                <span class="eyebrow-num">01</span>
+                <span class="eyebrow-rule"></span>
+                Everyday Care
+              </p>
+              <h2 class="section-title">Salon Services</h2>
+              <p class="section-lede">
+                Everyday hair, beard, and beauty services for men and women at
+                our Bafal salon near Chakhu Mandir.
+              </p>
+            </div>
+
+            <div class="section-head-action">
+              <a
+                href="services.html"
+                class="btn btn-primary btn-sm flex items-center gap-2 shadow-md"
+              >
+                <span>View Full Services Menu</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service Cards Grid -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mb-6"
+          >
+            <!-- Service 1 -->
+            <div
+              class="service-card card card-pad card-hover flex flex-col group cursor-pointer relative overflow-hidden border-t-2 border-t-[#d4af37]"
+              data-service-type="cut"
+            >
+              <div
+                class="media arch aspect-[16/10] mb-5 relative overflow-hidden rounded-xl border border-black/10 dark:border-white/10"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=700&q=80"
+                  alt="Men's Haircut and Styling"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+              <div class="flex items-start justify-between gap-3 mb-1.5">
+                <h3
+                  class="text-lg font-bold leading-snug m-0 group-hover:text-[#b8891f] transition-colors"
+                >
+                  Men's Haircut &amp; Styling
+                </h3>
+              </div>
+              <div
+                class="flex items-center justify-between text-xs text-stone-500 dark:text-stone-400 mb-3 pb-2 border-b border-black/10 dark:border-white/10"
+              >
+                <span class="font-semibold text-[#b8891f]">Men's Grooming</span>
+                <span class="flex items-center gap-1.5"
+                  ><i class="fa-regular fa-clock text-[#d4af37]"></i> 30â€“45
+                  Mins</span
+                >
+              </div>
+              <p class="text-sm leading-relaxed mb-4">
+                Classic scissor cuts, skin fades, taper fades, or everyday
+                trims, finished with a fresh wash and everyday styling.
+              </p>
+              <ul class="text-xs space-y-2 mb-6 list-none p-0 flex-1">
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-circle-check text-[#d4af37] text-xs mt-0.5 flex-none"
+                  ></i>
+                  <span>Consultation for your preferred haircut style</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-circle-check text-[#d4af37] text-xs mt-0.5 flex-none"
+                  ></i>
+                  <span>Clean scissor cut, clipper fade, or trim</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-circle-check text-[#d4af37] text-xs mt-0.5 flex-none"
+                  ></i>
+                  <span>Refreshing hair wash and towel dry</span>
+                </li>
+              </ul>
+              <button
+                class="book-service-btn btn btn-primary btn-sm w-full mt-auto"
+                data-service="Men's Haircut & Styling"
+              >
+                Book This Service
+              </button>
+            </div>
+
+            <!-- Service 2 -->
+            <div
+              class="service-card card card-pad card-hover flex flex-col group cursor-pointer relative overflow-hidden border-t-2 border-t-[#d4af37]"
+              data-service-type="cut"
+            >
+              <div
+                class="media arch aspect-[16/10] mb-5 relative overflow-hidden rounded-xl border border-black/10 dark:border-white/10"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=700&q=80"
+                  alt="Beard trim and shave"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+              <div class="flex items-start justify-between gap-3 mb-1.5">
+                <h3
+                  class="text-lg font-bold leading-snug m-0 group-hover:text-[#b8891f] transition-colors"
+                >
+                  Beard Trim &amp; Shave
+                </h3>
+              </div>
+              <div
+                class="flex items-center justify-between text-xs text-stone-500 dark:text-stone-400 mb-3 pb-2 border-b border-black/10 dark:border-white/10"
+              >
+                <span class="font-semibold text-[#b8891f]">Beard Care</span>
+                <span class="flex items-center gap-1.5"
+                  ><i class="fa-regular fa-clock text-[#d4af37]"></i> 20â€“30
+                  Mins</span
+                >
+              </div>
+              <p class="text-sm leading-relaxed mb-4">
+                Beard shaping, mustache trim, clean razor outline, and warm
+                towel softening followed by soothing aftershave balm.
+              </p>
+              <ul class="text-xs space-y-2 mb-6 list-none p-0 flex-1">
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-circle-check text-[#d4af37] text-xs mt-0.5 flex-none"
+                  ></i>
+                  <span>Beard length trimming with clipper &amp; scissors</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-circle-check text-[#d4af37] text-xs mt-0.5 flex-none"
+                  ></i>
+                  <span>Cheekline and neck razor outline</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-circle-check text-[#d4af37] text-xs mt-0.5 flex-none"
+                  ></i>
+                  <span>Warm towel compress to soften skin</span>
+                </li>
+              </ul>
+              <button
+                class="book-service-btn btn btn-primary btn-sm w-full mt-auto"
+                data-service="Beard Trim & Shave"
+              >
+                Book This Service
+              </button>
+            </div>
+
+            <!-- Service 3 -->
+            <div
+              class="service-card card card-pad card-hover flex flex-col group cursor-pointer relative overflow-hidden border-t-2 border-t-[#d4af37]"
+              data-service-type="cut"
+            >
+              <div
+                class="media arch aspect-[16/10] mb-5 relative overflow-hidden rounded-xl border border-black/10 dark:border-white/10"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=700&q=80"
+                  alt="Women's haircut and blowdry styling"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+              <div class="flex items-start justify-between gap-3 mb-1.5">
+                <h3
+                  class="text-lg font-bold leading-snug m-0 group-hover:text-[#b8891f] transition-colors"
+                >
+                  Women's Haircut &amp; Blowdry
+                </h3>
+              </div>
+              <div
+                class="flex items-center justify-between text-xs text-stone-500 dark:text-stone-400 mb-3 pb-2 border-b border-black/10 dark:border-white/10"
+              >
+                <span class="font-semibold text-[#b8891f]"
+                  >Women's Haircut</span
+                >
+                <span class="flex items-center gap-1.5"
+                  ><i class="fa-regular fa-clock text-[#d4af37]"></i> 45â€“60
+                  Mins</span
+                >
+              </div>
+              <p class="text-sm leading-relaxed mb-4">
+                Layer cut, step cut, bob cut, bangs, or split-end straight trim
+                with hair wash, conditioning, and blowdry styling.
+              </p>
+              <ul class="text-xs space-y-2 mb-6 list-none p-0 flex-1">
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-circle-check text-[#d4af37] text-xs mt-0.5 flex-none"
+                  ></i>
+                  <span>Style consultation for your hair texture</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-circle-check text-[#d4af37] text-xs mt-0.5 flex-none"
+                  ></i>
+                  <span>Refreshing hair wash &amp; conditioning</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-circle-check text-[#d4af37] text-xs mt-0.5 flex-none"
+                  ></i>
+                  <span>Smooth blowdry and everyday styling</span>
+                </li>
+              </ul>
+              <button
+                class="book-service-btn btn btn-primary btn-sm w-full mt-auto"
+                data-service="Women's Haircut & Blowdry"
+              >
+                Book This Service
+              </button>
+            </div>
+
+            <!-- Service 4 -->
+            <div
+              class="service-card card card-pad card-hover flex flex-col group cursor-pointer relative overflow-hidden border-t-2 border-t-[#d4af37]"
+              data-service-type="color"
+            >
+              <div
+                class="media arch aspect-[16/10] mb-5 relative overflow-hidden rounded-xl border border-black/10 dark:border-white/10"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=700&q=80"
+                  alt="Hair coloring and highlights"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+              <div class="flex items-start justify-between gap-3 mb-1.5">
+                <h3
+                  class="text-lg font-bold leading-snug m-0 group-hover:text-[#b8891f] transition-colors"
+                >
+                  Hair Coloring &amp; Highlights
+                </h3>
+              </div>
+              <div
+                class="flex items-center justify-between text-xs text-stone-500 dark:text-stone-400 mb-3 pb-2 border-b border-black/10 dark:border-white/10"
+              >
+                <span class="font-semibold text-[#b8891f]">Color Service</span>
+                <span class="flex items-center gap-1.5"
+                  ><i class="fa-regular fa-clock text-[#d4af37]"></i> 1.5â€“3
+                  Hours</span
+                >
+              </div>
+              <p class="text-sm leading-relaxed mb-4">
+                Full hair coloring, gray coverage, root touch-up, or highlights
+                using quality shades suited to your natural hair.
+              </p>
+              <ul class="text-xs space-y-2 mb-6 list-none p-0 flex-1">
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-circle-check text-[#d4af37] text-xs mt-0.5 flex-none"
+                  ></i>
+                  <span>Shade selection and color patch consultation</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-circle-check text-[#d4af37] text-xs mt-0.5 flex-none"
+                  ></i>
+                  <span>Even root application or streak highlights</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-circle-check text-[#d4af37] text-xs mt-0.5 flex-none"
+                  ></i>
+                  <span>Color-protecting hair wash &amp; conditioning</span>
+                </li>
+              </ul>
+              <button
+                class="book-service-btn btn btn-primary btn-sm w-full mt-auto"
+                data-service="Hair Coloring & Highlights"
+              >
+                Book This Service
+              </button>
+            </div>
+
+            <!-- Service 5 -->
+            <div
+              class="service-card card card-pad card-hover flex flex-col group cursor-pointer relative overflow-hidden border-t-2 border-t-[#d4af37]"
+              data-service-type="color"
+            >
+              <div
+                class="media arch aspect-[16/10] mb-5 relative overflow-hidden rounded-xl border border-black/10 dark:border-white/10"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1522337094346-290f268723bb?auto=format&fit=crop&w=700&q=80"
+                  alt="Keratin and smoothening treatment"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+              <div class="flex items-start justify-between gap-3 mb-1.5">
+                <h3
+                  class="text-lg font-bold leading-snug m-0 group-hover:text-[#b8891f] transition-colors"
+                >
+                  Hair Smoothening &amp; Keratin
+                </h3>
+              </div>
+              <div
+                class="flex items-center justify-between text-xs text-stone-500 dark:text-stone-400 mb-3 pb-2 border-b border-black/10 dark:border-white/10"
+              >
+                <span class="font-semibold text-[#b8891f]">Hair Texture</span>
+                <span class="flex items-center gap-1.5"
+                  ><i class="fa-regular fa-clock text-[#d4af37]"></i> 2.5â€“3.5
+                  Hours</span
+                >
+              </div>
+              <p class="text-sm leading-relaxed mb-4">
+                Smoothening, keratin treatment, or hair rebonding to manage
+                frizzy hair, reduce tangles, and leave hair soft and straight.
+              </p>
+              <ul class="text-xs space-y-2 mb-6 list-none p-0 flex-1">
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-circle-check text-[#d4af37] text-xs mt-0.5 flex-none"
+                  ></i>
+                  <span>Clarifying wash to prep hair strands</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-circle-check text-[#d4af37] text-xs mt-0.5 flex-none"
+                  ></i>
+                  <span>Keratin or smoothening cream application</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-circle-check text-[#d4af37] text-xs mt-0.5 flex-none"
+                  ></i>
+                  <span>Deep conditioning rinse and aftercare tips</span>
+                </li>
+              </ul>
+              <button
+                class="book-service-btn btn btn-primary btn-sm w-full mt-auto"
+                data-service="Hair Smoothening & Keratin"
+              >
+                Book This Service
+              </button>
+            </div>
+
+            <!-- Service 6 -->
+            <div
+              class="service-card card card-pad card-hover flex flex-col group cursor-pointer relative overflow-hidden border-t-2 border-t-[#d4af37]"
+              data-service-type="skin"
+            >
+              <div
+                class="media arch aspect-[16/10] mb-5 relative overflow-hidden rounded-xl border border-black/10 dark:border-white/10"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=700&q=80"
+                  alt="Facial and scalp massage"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+              <div class="flex items-start justify-between gap-3 mb-1.5">
+                <h3
+                  class="text-lg font-bold leading-snug m-0 group-hover:text-[#b8891f] transition-colors"
+                >
+                  Facial Care &amp; Head Massage
+                </h3>
+              </div>
+              <div
+                class="flex items-center justify-between text-xs text-stone-500 dark:text-stone-400 mb-3 pb-2 border-b border-black/10 dark:border-white/10"
+              >
+                <span class="font-semibold text-[#b8891f]">Skin &amp; Spa</span>
+                <span class="flex items-center gap-1.5"
+                  ><i class="fa-regular fa-clock text-[#d4af37]"></i> 45â€“60
+                  Mins</span
+                >
+              </div>
+              <p class="text-sm leading-relaxed mb-4">
+                Cleansing facial, scrub, steam, blackhead removal, skin pack,
+                and a relaxing head and neck massage.
+              </p>
+              <ul class="text-xs space-y-2 mb-6 list-none p-0 flex-1">
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-circle-check text-[#d4af37] text-xs mt-0.5 flex-none"
+                  ></i>
+                  <span>Gentle skin cleansing and herbal scrub</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-circle-check text-[#d4af37] text-xs mt-0.5 flex-none"
+                  ></i>
+                  <span>Warm steam and blackhead removal</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-circle-check text-[#d4af37] text-xs mt-0.5 flex-none"
+                  ></i>
+                  <span
+                    >15-minute relaxing head, neck &amp; shoulder massage</span
+                  >
+                </li>
+              </ul>
+              <button
+                class="book-service-btn btn btn-primary btn-sm w-full mt-auto"
+                data-service="Facial Care & Head Massage"
+              >
+                Book This Service
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. BEFORE & AFTER TRANSFORMATIONS (4 SLIDERS) -->
+      <section id="transformations" class="section section-light orn-styling">
+        <div class="luxury-container">
+          <div class="section-head is-split">
+            <div class="section-head-text text-left">
+              <p class="eyebrow justify-start">
+                <span class="eyebrow-num">02</span>
+                <span class="eyebrow-rule"></span>
+                Real Client Results
+              </p>
+              <h2 class="section-title">Before &amp; After Work</h2>
+              <p class="section-lede">
+                Drag the interactive slider left and right to see real
+                transformations achieved on our salon floor.
+              </p>
+            </div>
+
+            <div class="section-head-action">
+              <a
+                href="gallery.html"
+                class="btn btn-outline btn-sm flex items-center gap-2"
+              >
+                <span>View Full Gallery</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+            <!-- Slider 1 -->
+            <div
+              class="card card-pad card-hover flex flex-col justify-between border-t-2 border-t-[#d4af37]"
+            >
+              <div>
+                <span
+                  class="text-xs font-bold text-[#b8891f] uppercase tracking-wider block mb-1"
+                  >Color &amp; Texture Result</span
+                >
+                <h3 class="text-xl font-bold mb-2">
+                  Hair Smoothening &amp; Color Revive
+                </h3>
+                <p
+                  class="text-sm leading-relaxed mb-5 text-stone-600 dark:text-stone-300"
+                >
+                  Overcoming dry, frizzy ends with gentle smoothening and rich
+                  conditioning treatment.
+                </p>
+              </div>
+
+              <div
+                id="baSlider1"
+                class="ba-slider relative aspect-[16/10] sm:aspect-[16/9] rounded-2xl overflow-hidden cursor-ew-resize select-none border border-black/10 dark:border-white/15 shadow-xl bg-neutral-900"
+                tabindex="0"
+                role="slider"
+                aria-label="Before and after hair smoothening comparison"
+                aria-valuemin="5"
+                aria-valuemax="95"
+                aria-valuenow="50"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=1000&q=80"
+                  alt="After smoothening result"
+                  class="absolute inset-0 w-full h-full object-cover"
+                />
+                <div id="baClip1" class="ba-clip">
+                  <img
+                    src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=1000&q=80"
+                    alt="Before smoothening treatment"
+                    class="absolute inset-0 w-full h-full object-cover"
+                  />
+                </div>
+                <span class="ba-badge ba-badge-before">Before</span>
+                <span class="ba-badge ba-badge-after">After</span>
+                <div id="baHandle1" class="ba-handle" style="left: 50%">
+                  <div class="ba-handle-grip">
+                    <i class="fa-solid fa-left-right text-[10px]"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slider 2 -->
+            <div
+              class="card card-pad card-hover flex flex-col justify-between border-t-2 border-t-[#d4af37]"
+            >
+              <div>
+                <span
+                  class="text-xs font-bold text-[#b8891f] uppercase tracking-wider block mb-1"
+                  >Men's Transformation</span
+                >
+                <h3 class="text-xl font-bold mb-2">
+                  Fade Cut &amp; Beard Shaping
+                </h3>
+                <p
+                  class="text-sm leading-relaxed mb-5 text-stone-600 dark:text-stone-300"
+                >
+                  Clean low fade blending paired with straight razor beard
+                  contouring.
+                </p>
+              </div>
+
+              <div
+                id="baSlider2"
+                class="ba-slider relative aspect-[16/10] sm:aspect-[16/9] rounded-2xl overflow-hidden cursor-ew-resize select-none border border-black/10 dark:border-white/15 shadow-xl bg-neutral-900"
+                tabindex="0"
+                role="slider"
+                aria-label="Before and after beard and fade comparison"
+                aria-valuemin="5"
+                aria-valuemax="95"
+                aria-valuenow="50"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1000&q=80"
+                  alt="After fade and beard shaping"
+                  class="absolute inset-0 w-full h-full object-cover"
+                />
+                <div id="baClip2" class="ba-clip">
+                  <img
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1000&q=80"
+                    alt="Before haircut and trim"
+                    class="absolute inset-0 w-full h-full object-cover"
+                  />
+                </div>
+                <span class="ba-badge ba-badge-before">Before</span>
+                <span class="ba-badge ba-badge-after">After</span>
+                <div id="baHandle2" class="ba-handle" style="left: 50%">
+                  <div class="ba-handle-grip">
+                    <i class="fa-solid fa-left-right text-[10px]"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slider 3 -->
+            <div
+              class="card card-pad card-hover flex flex-col justify-between border-t-2 border-t-[#d4af37]"
+            >
+              <div>
+                <span
+                  class="text-xs font-bold text-[#b8891f] uppercase tracking-wider block mb-1"
+                  >Color Craft</span
+                >
+                <h3 class="text-xl font-bold mb-2">
+                  Balayage Highlights &amp; Gloss Tone
+                </h3>
+                <p
+                  class="text-sm leading-relaxed mb-5 text-stone-600 dark:text-stone-300"
+                >
+                  Sun-kissed hand-painted balayage dimension finished with deep
+                  moisture gloss.
+                </p>
+              </div>
+
+              <div
+                id="baSlider3"
+                class="ba-slider relative aspect-[16/10] sm:aspect-[16/9] rounded-2xl overflow-hidden cursor-ew-resize select-none border border-black/10 dark:border-white/15 shadow-xl bg-neutral-900"
+                tabindex="0"
+                role="slider"
+                aria-label="Before and after balayage comparison"
+                aria-valuemin="5"
+                aria-valuemax="95"
+                aria-valuenow="50"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=80"
+                  alt="After balayage highlights"
+                  class="absolute inset-0 w-full h-full object-cover"
+                />
+                <div id="baClip3" class="ba-clip">
+                  <img
+                    src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?auto=format&fit=crop&w=1000&q=80"
+                    alt="Before hair coloring"
+                    class="absolute inset-0 w-full h-full object-cover"
+                  />
+                </div>
+                <span class="ba-badge ba-badge-before">Before</span>
+                <span class="ba-badge ba-badge-after">After</span>
+                <div id="baHandle3" class="ba-handle" style="left: 50%">
+                  <div class="ba-handle-grip">
+                    <i class="fa-solid fa-left-right text-[10px]"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slider 4 -->
+            <div
+              class="card card-pad card-hover flex flex-col justify-between border-t-2 border-t-[#d4af37]"
+            >
+              <div>
+                <span
+                  class="text-xs font-bold text-[#b8891f] uppercase tracking-wider block mb-1"
+                  >Skin &amp; Scalp Care</span
+                >
+                <h3 class="text-xl font-bold mb-2">
+                  Facial Cleanse &amp; Skin Hydration
+                </h3>
+                <p
+                  class="text-sm leading-relaxed mb-5 text-stone-600 dark:text-stone-300"
+                >
+                  Herbal steam exfoliation and revitalizing facial hydration
+                  treatment.
+                </p>
+              </div>
+
+              <div
+                id="baSlider4"
+                class="ba-slider relative aspect-[16/10] sm:aspect-[16/9] rounded-2xl overflow-hidden cursor-ew-resize select-none border border-black/10 dark:border-white/15 shadow-xl bg-neutral-900"
+                tabindex="0"
+                role="slider"
+                aria-label="Before and after facial clean-up comparison"
+                aria-valuemin="5"
+                aria-valuemax="95"
+                aria-valuenow="50"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1000&q=80"
+                  alt="After facial hydration glow"
+                  class="absolute inset-0 w-full h-full object-cover"
+                />
+                <div id="baClip4" class="ba-clip">
+                  <img
+                    src="https://images.unsplash.com/photo-1512290900672-1f4864c7e602?auto=format&fit=crop&w=1000&q=80"
+                    alt="Before facial treatment"
+                    class="absolute inset-0 w-full h-full object-cover"
+                  />
+                </div>
+                <span class="ba-badge ba-badge-before">Before</span>
+                <span class="ba-badge ba-badge-after">After</span>
+                <div id="baHandle4" class="ba-handle" style="left: 50%">
+                  <div class="ba-handle-grip">
+                    <i class="fa-solid fa-left-right text-[10px]"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. VIDEO REELS: 4 REELS ON SCREEN FIRST (VIDEO ONLY, NO TEXTS) -->
+      <section id="videoStories" class="section section-dark orn-comb">
+        <div class="luxury-container">
+          <div class="section-head is-split">
+            <div class="section-head-text text-left">
+              <p class="eyebrow justify-start">
+                <span class="eyebrow-num">03</span>
+                <span class="eyebrow-rule"></span>
+                Live Salon Moments
+              </p>
+              <h2 class="section-title">Watch Video Reels</h2>
+              <p class="section-lede">
+                Short video clips of client haircuts, styling, and live floor
+                moments.
+              </p>
+            </div>
+            <div class="section-head-action">
+              <a
+                href="gallery.html"
+                class="btn btn-outline btn-sm flex items-center gap-2"
+              >
+                <span>View Full Gallery</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Reels Carousel -->
+          <div class="reels-carousel-wrap">
+            <div class="reels-carousel-track-outer">
+              <div id="reelsTrack" class="reels-carousel-track">
+                <!-- Reel 1 -->
+                <div class="reels-carousel-slide">
+                  <div
+                    class="video-trigger aspect-[9/16] rounded-2xl overflow-hidden relative group cursor-pointer shadow-md hover:shadow-2xl transition-all duration-300 bg-stone-900 border border-stone-200/20"
+                    data-video-title="Salon Styling Session"
+                    data-video-author="G2 Royal Salon"
+                    data-video-poster="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=800&q=80"
+                  >
+                    <img
+                      src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=800&q=80"
+                      alt="Video Reel 1"
+                      class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div
+                      class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex items-center justify-center"
+                    >
+                      <div
+                        class="w-12 h-12 rounded-full bg-[#d4af37] text-[#121316] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform"
+                      >
+                        <i class="fa-solid fa-play text-sm ml-0.5"></i>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute top-3 right-3 w-7 h-7 rounded-full bg-black/40 backdrop-blur-md text-white/90 flex items-center justify-center text-xs shadow-sm"
+                    >
+                      <i class="fa-solid fa-clapperboard text-[11px]"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Reel 2 -->
+                <div class="reels-carousel-slide">
+                  <div
+                    class="video-trigger aspect-[9/16] rounded-2xl overflow-hidden relative group cursor-pointer shadow-md hover:shadow-2xl transition-all duration-300 bg-stone-900 border border-stone-200/20"
+                    data-video-title="Hair Texture &amp; Smoothening"
+                    data-video-author="G2 Royal Salon"
+                    data-video-poster="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80"
+                  >
+                    <img
+                      src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80"
+                      alt="Video Reel 2"
+                      class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div
+                      class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex items-center justify-center"
+                    >
+                      <div
+                        class="w-12 h-12 rounded-full bg-[#d4af37] text-[#121316] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform"
+                      >
+                        <i class="fa-solid fa-play text-sm ml-0.5"></i>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute top-3 right-3 w-7 h-7 rounded-full bg-black/40 backdrop-blur-md text-white/90 flex items-center justify-center text-xs shadow-sm"
+                    >
+                      <i class="fa-solid fa-clapperboard text-[11px]"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Reel 3 -->
+                <div class="reels-carousel-slide">
+                  <div
+                    class="video-trigger aspect-[9/16] rounded-2xl overflow-hidden relative group cursor-pointer shadow-md hover:shadow-2xl transition-all duration-300 bg-stone-900 border border-stone-200/20"
+                    data-video-title="Hair Care &amp; Spa"
+                    data-video-author="G2 Royal Salon"
+                    data-video-poster="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80"
+                  >
+                    <img
+                      src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80"
+                      alt="Video Reel 3"
+                      class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div
+                      class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex items-center justify-center"
+                    >
+                      <div
+                        class="w-12 h-12 rounded-full bg-[#d4af37] text-[#121316] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform"
+                      >
+                        <i class="fa-solid fa-play text-sm ml-0.5"></i>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute top-3 right-3 w-7 h-7 rounded-full bg-black/40 backdrop-blur-md text-white/90 flex items-center justify-center text-xs shadow-sm"
+                    >
+                      <i class="fa-solid fa-clapperboard text-[11px]"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Reel 4 -->
+                <div class="reels-carousel-slide">
+                  <div
+                    class="video-trigger aspect-[9/16] rounded-2xl overflow-hidden relative group cursor-pointer shadow-md hover:shadow-2xl transition-all duration-300 bg-stone-900 border border-stone-200/20"
+                    data-video-title="Fade Cut &amp; Beard Shaping"
+                    data-video-author="G2 Royal Salon"
+                    data-video-poster="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80"
+                  >
+                    <img
+                      src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80"
+                      alt="Video Reel 4"
+                      class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div
+                      class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex items-center justify-center"
+                    >
+                      <div
+                        class="w-12 h-12 rounded-full bg-[#d4af37] text-[#121316] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform"
+                      >
+                        <i class="fa-solid fa-play text-sm ml-0.5"></i>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute top-3 right-3 w-7 h-7 rounded-full bg-black/40 backdrop-blur-md text-white/90 flex items-center justify-center text-xs shadow-sm"
+                    >
+                      <i class="fa-solid fa-clapperboard text-[11px]"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Carousel Nav -->
+            <div class="reels-carousel-nav">
+              <div class="reels-carousel-dots" id="reelsDots">
+                <button
+                  class="reels-carousel-dot is-active"
+                  data-reel-dot="0"
+                  aria-label="Reel 1"
+                ></button>
+                <button
+                  class="reels-carousel-dot"
+                  data-reel-dot="1"
+                  aria-label="Reel 2"
+                ></button>
+                <button
+                  class="reels-carousel-dot"
+                  data-reel-dot="2"
+                  aria-label="Reel 3"
+                ></button>
+                <button
+                  class="reels-carousel-dot"
+                  data-reel-dot="3"
+                  aria-label="Reel 4"
+                ></button>
+              </div>
+              <div class="reels-carousel-arrow">
+                <button
+                  id="reelsPrev"
+                  class="reels-carousel-btn"
+                  aria-label="Previous reel"
+                >
+                  <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button
+                  id="reelsNext"
+                  class="reels-carousel-btn"
+                  aria-label="Next reel"
+                >
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. ACADEMY OVERVIEW (NO PRICES, NO REVIEWS) -->
+      <section id="academy" class="section section-light orn-razors">
+        <div class="luxury-container">
+          <div class="section-head is-split">
+            <div class="section-head-text">
+              <p class="eyebrow">
+                <span class="eyebrow-num">04</span>
+                <span class="eyebrow-rule"></span>
+                Skills Education
+              </p>
+              <h2 class="section-title">G2 Training Academy</h2>
+              <p class="section-lede">
+                Learn barbering, hair styling, and skin care inside an active
+                working salon near Chakhu Mandir, Bafal. Practical learning on
+                live models under continuous instructor supervision.
+              </p>
+            </div>
+            <div class="section-head-action">
+              <a
+                href="academy.html"
+                class="btn btn-primary btn-sm flex items-center gap-2 shadow-md"
+              >
+                <span>View All Training Courses</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-7">
+            <!-- Course 1 -->
+            <div
+              class="card card-pad card-hover flex flex-col group cursor-pointer relative overflow-hidden border-t-2 border-t-[#d4af37]"
+            >
+              <div
+                class="media arch aspect-[16/10] mb-5 relative overflow-hidden rounded-xl border border-black/10 dark:border-white/10"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=600&q=80"
+                  alt="Barbering Course"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+              <div class="flex items-start justify-between gap-3 mb-1.5">
+                <h3
+                  class="text-lg font-bold leading-snug m-0 group-hover:text-[#b8891f] transition-colors"
+                >
+                  Master Barbering Course
+                </h3>
+              </div>
+              <div
+                class="flex items-center justify-between text-xs text-stone-500 dark:text-stone-400 mb-3 pb-2 border-b border-black/10 dark:border-white/10"
+              >
+                <span class="font-semibold text-[#b8891f]"
+                  >12 Weeks (360 Hours)</span
+                >
+                <span class="flex items-center gap-1.5"
+                  ><i class="fa-regular fa-clock text-[#d4af37]"></i> Practical
+                  Floor</span
+                >
+              </div>
+              <p class="text-sm leading-relaxed mb-4">
+                Learn men's haircuts, skin fades, beard shaping, hot towel razor
+                shaving, and tool handling in an active salon setting.
+              </p>
+              <ul class="text-xs space-y-2 mb-6 list-none p-0 flex-1">
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-circle-check text-[#d4af37] text-xs mt-0.5 flex-none"
+                  ></i>
+                  <span>Scissor cuts, clipper trims, and fade techniques</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-circle-check text-[#d4af37] text-xs mt-0.5 flex-none"
+                  ></i>
+                  <span>Beard shaping, line-ups, and hot towel shave</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-circle-check text-[#d4af37] text-xs mt-0.5 flex-none"
+                  ></i>
+                  <span>Hands-on practice on real clients</span>
+                </li>
+              </ul>
+              <a
+                href="academy.html"
+                class="btn btn-primary btn-sm w-full mt-auto text-center"
+              >
+                View Course Details
+              </a>
+            </div>
+
+            <!-- Course 2 -->
+            <div
+              class="card card-pad card-hover flex flex-col group cursor-pointer relative overflow-hidden border-t-2 border-t-[#d4af37]"
+            >
+              <div
+                class="media arch aspect-[16/10] mb-5 relative overflow-hidden rounded-xl border border-black/10 dark:border-white/10"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=600&q=80"
+                  alt="Hair Styling and Beautician Course"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+              <div class="flex items-start justify-between gap-3 mb-1.5">
+                <h3
+                  class="text-lg font-bold leading-snug m-0 group-hover:text-[#b8891f] transition-colors"
+                >
+                  Hair Styling &amp; Beautician Course
+                </h3>
+              </div>
+              <div
+                class="flex items-center justify-between text-xs text-stone-500 dark:text-stone-400 mb-3 pb-2 border-b border-black/10 dark:border-white/10"
+              >
+                <span class="font-semibold text-[#b8891f]"
+                  >16 Weeks (480 Hours)</span
+                >
+                <span class="flex items-center gap-1.5"
+                  ><i class="fa-regular fa-clock text-[#d4af37]"></i> Practical
+                  Floor</span
+                >
+              </div>
+              <p class="text-sm leading-relaxed mb-4">
+                Complete training in women's haircutting, blowdry styling, hair
+                coloring, smoothening &amp; keratin, and everyday salon
+                operations.
+              </p>
+              <ul class="text-xs space-y-2 mb-6 list-none p-0 flex-1">
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-circle-check text-[#d4af37] text-xs mt-0.5 flex-none"
+                  ></i>
+                  <span>Layer cuts, bob cuts, and blowdry styling</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-circle-check text-[#d4af37] text-xs mt-0.5 flex-none"
+                  ></i>
+                  <span>Hair coloring, root touch-up, and highlights</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-circle-check text-[#d4af37] text-xs mt-0.5 flex-none"
+                  ></i>
+                  <span>Hair smoothening, keratin, and hair spa</span>
+                </li>
+              </ul>
+              <a
+                href="academy.html"
+                class="btn btn-primary btn-sm w-full mt-auto text-center"
+              >
+                View Course Details
+              </a>
+            </div>
+
+            <!-- Course 3 -->
+            <div
+              class="card card-pad card-hover flex flex-col group cursor-pointer relative overflow-hidden border-t-2 border-t-[#d4af37]"
+            >
+              <div
+                class="media arch aspect-[16/10] mb-5 relative overflow-hidden rounded-xl border border-black/10 dark:border-white/10"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=600&q=80"
+                  alt="Basic Skin & Beauty Care Course"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+              <div class="flex items-start justify-between gap-3 mb-1.5">
+                <h3
+                  class="text-lg font-bold leading-snug m-0 group-hover:text-[#b8891f] transition-colors"
+                >
+                  Basic Skin Care &amp; Grooming
+                </h3>
+              </div>
+              <div
+                class="flex items-center justify-between text-xs text-stone-500 dark:text-stone-400 mb-3 pb-2 border-b border-black/10 dark:border-white/10"
+              >
+                <span class="font-semibold text-[#b8891f]"
+                  >6 Weeks (120 Hours)</span
+                >
+                <span class="flex items-center gap-1.5"
+                  ><i class="fa-regular fa-clock text-[#d4af37]"></i> Practical
+                  Floor</span
+                >
+              </div>
+              <p class="text-sm leading-relaxed mb-4">
+                Practical training in facials, skin cleansing, eyebrow
+                threading, waxing, and relaxing head and shoulder massage.
+              </p>
+              <ul class="text-xs space-y-2 mb-6 list-none p-0 flex-1">
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-circle-check text-[#d4af37] text-xs mt-0.5 flex-none"
+                  ></i>
+                  <span>Cleansing facials, scrubs, and face packs</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-circle-check text-[#d4af37] text-xs mt-0.5 flex-none"
+                  ></i>
+                  <span>Eyebrow threading and waxing techniques</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i
+                    class="fa-solid fa-circle-check text-[#d4af37] text-xs mt-0.5 flex-none"
+                  ></i>
+                  <span>Head, neck, and shoulder massage steps</span>
+                </li>
+              </ul>
+              <a
+                href="academy.html"
+                class="btn btn-primary btn-sm w-full mt-auto text-center"
+              >
+                View Course Details
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. STUDENT JOURNEY -->
+      <section id="journey" class="section section-dark orn-scissors">
+        <div class="luxury-container">
+          <div class="section-head is-split">
+            <div class="section-head-text text-left">
+              <p class="eyebrow justify-start">
+                <span class="eyebrow-num">05</span>
+                <span class="eyebrow-rule"></span>
+                Learning Methodology
+              </p>
+              <h2 class="section-title">How Practical Training Works</h2>
+              <p class="section-lede">
+                Building real salon skills through progressive hands-on practice
+                in an active salon environment.
+              </p>
+            </div>
+            <div class="section-head-action">
+              <a
+                href="academy.html"
+                class="btn btn-outline btn-sm flex items-center gap-2"
+              >
+                <span>View Academy Details</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div
+              class="card card-pad flex flex-col border-t-2 border-t-[#d4af37]"
+            >
+              <span
+                class="w-10 h-10 rounded-full bg-[#d4af37]/20 border border-[#d4af37] text-[#d4af37] flex items-center justify-center font-bold text-sm mb-4"
+                >01</span
+              >
+              <h3 class="text-base font-bold text-white mb-2">
+                Tool Care &amp; Hygiene
+              </h3>
+              <p class="text-xs text-stone-300 leading-relaxed m-0">
+                Understanding shears, clippers, blade angles, and sterilization
+                protocols.
+              </p>
+            </div>
+            <div
+              class="card card-pad flex flex-col border-t-2 border-t-[#d4af37]"
+            >
+              <span
+                class="w-10 h-10 rounded-full bg-[#d4af37]/20 border border-[#d4af37] text-[#d4af37] flex items-center justify-center font-bold text-sm mb-4"
+                >02</span
+              >
+              <h3 class="text-base font-bold text-white mb-2">
+                Mannequin Practice
+              </h3>
+              <p class="text-xs text-stone-300 leading-relaxed m-0">
+                Drilling parting, sectioning, angles, and scissor texturing on
+                training dummy heads.
+              </p>
+            </div>
+            <div
+              class="card card-pad flex flex-col border-t-2 border-t-[#d4af37]"
+            >
+              <span
+                class="w-10 h-10 rounded-full bg-[#d4af37]/20 border border-[#d4af37] text-[#d4af37] flex items-center justify-center font-bold text-sm mb-4"
+                >03</span
+              >
+              <h3 class="text-base font-bold text-white mb-2">
+                Supervised Models
+              </h3>
+              <p class="text-xs text-stone-300 leading-relaxed m-0">
+                Executing haircuts on live models with an instructor inspecting
+                each section.
+              </p>
+            </div>
+            <div
+              class="card card-pad flex flex-col border-t-2 border-t-[#d4af37]"
+            >
+              <span
+                class="w-10 h-10 rounded-full bg-[#d4af37]/20 border border-[#d4af37] text-[#d4af37] flex items-center justify-center font-bold text-sm mb-4"
+                >04</span
+              >
+              <h3 class="text-base font-bold text-white mb-2">
+                Active Salon Floor
+              </h3>
+              <p class="text-xs text-stone-300 leading-relaxed m-0">
+                Serving regular clients, managing chair timing, and gaining
+                workplace confidence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. WHAT PEOPLE SAY (CAROUSEL WITH 8 TESTIMONIALS) -->
+      <section id="voices" class="section section-light orn-razors">
+        <div class="luxury-container">
+          <div class="section-head is-split">
+            <div class="section-head-text text-left">
+              <p class="eyebrow justify-start">
+                <span class="eyebrow-num">06</span>
+                <span class="eyebrow-rule"></span>
+                Community Voices
+              </p>
+              <h2 class="section-title">Customer &amp; Student Feedback</h2>
+              <p class="section-lede">
+                Reviews commonly highlight the combination of salon services and
+                practical training, making it appealing to both customers and
+                aspiring beauty professionals.
+              </p>
+            </div>
+            <div class="section-head-action flex items-center gap-2">
+              <button
+                id="testiPrevBtn"
+                class="arrow-btn"
+                aria-label="Previous testimonial"
+              >
+                <i class="fa-solid fa-chevron-left text-xs"></i>
+              </button>
+              <button
+                id="testiNextBtn"
+                class="arrow-btn"
+                aria-label="Next testimonial"
+              >
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Carousel Container -->
+          <div class="testi-carousel-wrapper">
+            <div id="testiTrack" class="testi-track">
+              <!-- Slide 1 -->
+              <div class="testi-slide">
+                <div
+                  class="card card-pad h-full flex flex-col justify-between border-t-2 border-t-[#d4af37]"
+                >
+                  <p class="text-sm italic leading-relaxed m-0 mb-5">
+                    "The staff here is approachable and friendly. They took
+                    the time to understand the haircut style I wanted, and the
+                    overall atmosphere is welcoming and relaxed.â€
+                  </p>
+                  <div
+                    class="pt-4 border-t border-black/10 dark:border-white/10 flex items-center gap-3"
+                  >
+                    <div
+                      class="w-10 h-10 rounded-full overflow-hidden bg-neutral-200 dark:bg-neutral-800 flex-none"
+                    >
+                      <img
+                        src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80"
+                        alt="Customer"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div>
+                      <h4 class="text-sm font-bold m-0">Pranita Shrestha</h4>
+                      <span class="text-xs text-stone-500 dark:text-stone-400"
+                        >Salon Customer • Bafal</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="testi-slide">
+                <div
+                  class="card card-pad h-full flex flex-col justify-between border-t-2 border-t-[#d4af37]"
+                >
+                  <p class="text-sm italic leading-relaxed m-0 mb-5">
+                    "The best part about training here is the hands-on
+                    learning on the active salon floor. You practice on real
+                    clients with trainers right beside you to guide every
+                    step.â€
+                  </p>
+                  <div
+                    class="pt-4 border-t border-black/10 dark:border-white/10 flex items-center gap-3"
+                  >
+                    <div
+                      class="w-10 h-10 rounded-full overflow-hidden bg-neutral-200 dark:bg-neutral-800 flex-none"
+                    >
+                      <img
+                        src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80"
+                        alt="Student"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div>
+                      <h4 class="text-sm font-bold m-0">Samana Joshi</h4>
+                      <span class="text-xs text-stone-500 dark:text-stone-400"
+                        >Training Student • Hair &amp; Beauty</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="testi-slide">
+                <div
+                  class="card card-pad h-full flex flex-col justify-between border-t-2 border-t-[#d4af37]"
+                >
+                  <p class="text-sm italic leading-relaxed m-0 mb-5">
+                    "Got a fade and beard trim before an event. The precision
+                    with the straight razor and the hot towel finish was superb.
+                    Highly recommend visiting.â€
+                  </p>
+                  <div
+                    class="pt-4 border-t border-black/10 dark:border-white/10 flex items-center gap-3"
+                  >
+                    <div
+                      class="w-10 h-10 rounded-full overflow-hidden bg-neutral-200 dark:bg-neutral-800 flex-none"
+                    >
+                      <img
+                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80"
+                        alt="Customer"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div>
+                      <h4 class="text-sm font-bold m-0">Manish Thapa</h4>
+                      <span class="text-xs text-stone-500 dark:text-stone-400"
+                        >Barbering Client • Kalanki</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 4 -->
+              <div class="testi-slide">
+                <div
+                  class="card card-pad h-full flex flex-col justify-between border-t-2 border-t-[#d4af37]"
+                >
+                  <p class="text-sm italic leading-relaxed m-0 mb-5">
+                    "Did keratin smoothening and my frizzy hair is completely
+                    manageable now. Very attentive staff and they explained all
+                    post-care tips clearly.â€
+                  </p>
+                  <div
+                    class="pt-4 border-t border-black/10 dark:border-white/10 flex items-center gap-3"
+                  >
+                    <div
+                      class="w-10 h-10 rounded-full overflow-hidden bg-neutral-200 dark:bg-neutral-800 flex-none"
+                    >
+                      <img
+                        src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80"
+                        alt="Customer"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div>
+                      <h4 class="text-sm font-bold m-0">Anisha Gurung</h4>
+                      <span class="text-xs text-stone-500 dark:text-stone-400"
+                        >Salon Customer • Sitapaila</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 5 -->
+              <div class="testi-slide">
+                <div
+                  class="card card-pad h-full flex flex-col justify-between border-t-2 border-t-[#d4af37]"
+                >
+                  <p class="text-sm italic leading-relaxed m-0 mb-5">
+                    "Started with zero experience and completed the 12-week
+                    barbering track. By the final month I was cutting on the
+                    floor with real speed and precision.â€
+                  </p>
+                  <div
+                    class="pt-4 border-t border-black/10 dark:border-white/10 flex items-center gap-3"
+                  >
+                    <div
+                      class="w-10 h-10 rounded-full overflow-hidden bg-neutral-200 dark:bg-neutral-800 flex-none"
+                    >
+                      <img
+                        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80"
+                        alt="Graduate"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div>
+                      <h4 class="text-sm font-bold m-0">Bikash Maharjan</h4>
+                      <span class="text-xs text-stone-500 dark:text-stone-400"
+                        >Academy Graduate • Barbering</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 6 -->
+              <div class="testi-slide">
+                <div
+                  class="card card-pad h-full flex flex-col justify-between border-t-2 border-t-[#d4af37]"
+                >
+                  <p class="text-sm italic leading-relaxed m-0 mb-5">
+                    "Wonderful hair spa and relaxing head massage after a
+                    tiring week. The salon is clean, well-lit, and very
+                    comfortable for both men and women.â€
+                  </p>
+                  <div
+                    class="pt-4 border-t border-black/10 dark:border-white/10 flex items-center gap-3"
+                  >
+                    <div
+                      class="w-10 h-10 rounded-full overflow-hidden bg-neutral-200 dark:bg-neutral-800 flex-none"
+                    >
+                      <img
+                        src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80"
+                        alt="Customer"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div>
+                      <h4 class="text-sm font-bold m-0">Deepa Karki</h4>
+                      <span class="text-xs text-stone-500 dark:text-stone-400"
+                        >Salon Client • Swoyambhu</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 7 -->
+              <div class="testi-slide">
+                <div
+                  class="card card-pad h-full flex flex-col justify-between border-t-2 border-t-[#d4af37]"
+                >
+                  <p class="text-sm italic leading-relaxed m-0 mb-5">
+                    "Convenient location right near Chakhu Mandir. The staff
+                    is prompt and friendly whether you walk in or call ahead for
+                    an appointment.â€
+                  </p>
+                  <div
+                    class="pt-4 border-t border-black/10 dark:border-white/10 flex items-center gap-3"
+                  >
+                    <div
+                      class="w-10 h-10 rounded-full overflow-hidden bg-neutral-200 dark:bg-neutral-800 flex-none"
+                    >
+                      <img
+                        src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=200&q=80"
+                        alt="Customer"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div>
+                      <h4 class="text-sm font-bold m-0">Roshan Shrestha</h4>
+                      <span class="text-xs text-stone-500 dark:text-stone-400"
+                        >Regular Client • Bafal Marg</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 8 -->
+              <div class="testi-slide">
+                <div
+                  class="card card-pad h-full flex flex-col justify-between border-t-2 border-t-[#d4af37]"
+                >
+                  <p class="text-sm italic leading-relaxed m-0 mb-5">
+                    "The practical sessions on skin cleansing and facial
+                    techniques gave me the confidence to handle clients
+                    independently. Excellent mentorship.â€
+                  </p>
+                  <div
+                    class="pt-4 border-t border-black/10 dark:border-white/10 flex items-center gap-3"
+                  >
+                    <div
+                      class="w-10 h-10 rounded-full overflow-hidden bg-neutral-200 dark:bg-neutral-800 flex-none"
+                    >
+                      <img
+                        src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80"
+                        alt="Student"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div>
+                      <h4 class="text-sm font-bold m-0">Pooja Lama</h4>
+                      <span class="text-xs text-stone-500 dark:text-stone-400"
+                        >Training Student • Skin &amp; Beauty</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dots Indicator -->
+          <div
+            id="testiDots"
+            class="flex items-center justify-center gap-2 mt-8"
+          ></div>
+        </div>
+      </section>
+
+      <!-- 7. LOCATION MAP -->
+      <section id="studio" class="section section-dark orn-spray">
+        <div class="luxury-container">
+          <div class="section-head text-left max-w-2xl mb-8">
+            <p class="eyebrow justify-start">
+              <span class="eyebrow-num">07</span>
+              <span class="eyebrow-rule"></span>
+              Studio Location
+            </p>
+            <h2 class="section-title">Visit Us in Bafal</h2>
+            <p class="section-lede">
+              Near Chakhu Mandir on Bafal Marg, Kathmandu. Open until 8:30 PM.
+            </p>
+          </div>
+
+          <div
+            class="rounded-2xl overflow-hidden shadow-2xl border border-white/20 aspect-[16/9] md:aspect-[21/9] bg-neutral-900"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.7483785641774!2d85.28189677546702!3d27.694145776191063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1863583a4fb3%3A0xe67cb56c80c0fa80!2sBafal%2C%20Kathmandu!5e0!3m2!1sen!2snp!4v1700000000000!5m2!1sen!2snp"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="G2 Royal Location Map"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer
+        id="mainFooter"
+        class="bg-[#0b0c0e] text-white pt-14 pb-8 border-t border-[#d4af37]/30"
+      >
+        <div class="luxury-container">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pb-12 border-b border-white/10"
+          >
+            <!-- Col 1: Brand Info -->
+            <div class="lg:col-span-4 space-y-4">
+              <div class="flex items-center space-x-3">
+                <img
+                  src="logo.png"
+                  alt="G2 Royal Crest"
+                  width="48"
+                  height="48"
+                  class="h-10 w-auto object-contain"
+                />
+                <div>
+                  <span
+                    class="font-slab font-bold text-xl text-[#d4af37] block leading-tight"
+                    >G2 Royal Unisex</span
+                  >
+                  <span
+                    class="text-xs text-stone-300 uppercase tracking-wider font-medium"
+                    >Salon &amp; Training Academy</span
+                  >
+                </div>
+              </div>
+              <p class="text-sm text-stone-300 leading-relaxed max-w-sm m-0">
+                A beauty salon and practical skills-training business in Bafal,
+                Kathmandu. Providing everyday hair, beard, skin services and
+                hands-on vocational courses.
+              </p>
+              <div class="flex items-center gap-2.5 pt-1">
+                <a
+                  href="#"
+                  class="w-8 h-8 rounded-lg bg-white/10 hover:bg-[#d4af37] hover:text-[#121316] text-white flex items-center justify-center text-xs transition-colors"
+                  aria-label="Facebook"
+                  ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+                <a
+                  href="#"
+                  class="w-8 h-8 rounded-lg bg-white/10 hover:bg-[#d4af37] hover:text-[#121316] text-white flex items-center justify-center text-xs transition-colors"
+                  aria-label="Instagram"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+                <a
+                  href="#"
+                  class="w-8 h-8 rounded-lg bg-white/10 hover:bg-[#d4af37] hover:text-[#121316] text-white flex items-center justify-center text-xs transition-colors"
+                  aria-label="YouTube"
+                  ><i class="fa-brands fa-youtube"></i
+                ></a>
+                <a
+                  href="#"
+                  class="w-8 h-8 rounded-lg bg-white/10 hover:bg-[#d4af37] hover:text-[#121316] text-white flex items-center justify-center text-xs transition-colors"
+                  aria-label="TikTok"
+                  ><i class="fa-brands fa-tiktok"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- Col 2: Salon Services -->
+            <div class="lg:col-span-2 space-y-3">
+              <h4
+                class="font-slab text-sm font-bold text-white uppercase tracking-wider m-0"
+              >
+                Salon Services
+              </h4>
+              <ul class="space-y-2 text-sm text-stone-300 list-none p-0 m-0">
+                <li>
+                  <a
+                    href="services.html"
+                    class="hover:text-[#d4af37] transition-colors"
+                    >Haircuts &amp; Styling</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="services.html"
+                    class="hover:text-[#d4af37] transition-colors"
+                    >Beard Trim &amp; Shaving</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="services.html"
+                    class="hover:text-[#d4af37] transition-colors"
+                    >Hair Smoothening</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="services.html"
+                    class="hover:text-[#d4af37] transition-colors"
+                    >Facials &amp; Clean-Up</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Col 3: Quick Links -->
+            <div class="lg:col-span-3 space-y-3">
+              <h4
+                class="font-slab text-sm font-bold text-white uppercase tracking-wider m-0"
+              >
+                Quick Links
+              </h4>
+              <ul class="space-y-2 text-sm text-stone-300 list-none p-0 m-0">
+                <li>
+                  <a
+                    href="about.html"
+                    class="hover:text-[#d4af37] transition-colors"
+                    >About Our Salon</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="academy.html"
+                    class="hover:text-[#d4af37] transition-colors"
+                    >Training Academy</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="gallery.html"
+                    class="hover:text-[#d4af37] transition-colors"
+                    >Photo Gallery</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="contact.html"
+                    class="hover:text-[#d4af37] transition-colors"
+                    >Find Location &amp; Map</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="contact.html"
+                    class="hover:text-[#d4af37] transition-colors"
+                    >Book an Appointment</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Col 4: Contact & Hours -->
+            <div class="lg:col-span-3 space-y-3">
+              <h4
+                class="font-slab text-sm font-bold text-white uppercase tracking-wider m-0"
+              >
+                Visit &amp; Contact
+              </h4>
+              <div class="space-y-2 text-sm text-stone-300">
+                <p class="m-0 leading-relaxed text-white">
+                  <i class="fa-solid fa-location-dot text-[#d4af37] mr-1.5"></i>
+                  near Chakhu Mandir, Bafal Marg, Kathmandu
+                </p>
+                <p class="m-0 text-stone-300">
+                  <i class="fa-solid fa-phone text-[#d4af37] mr-1.5"></i>
+                  <a
+                    href="tel:+9779742931920"
+                    class="hover:text-[#d4af37] text-white font-medium"
+                    >974-2931920</a
+                  >
+                </p>
+                <p class="m-0 text-stone-300 pt-1">
+                  <i class="fa-regular fa-clock text-[#d4af37] mr-1.5"></i>
+                  Open until 8:30 PM (Around 7:00 AM â€“ 8:30 PM)
+                </p>
+                <p class="m-0 pt-1">
+                  <a
+                    href="https://www.google.com/maps/dir/?api=1&destination=G2+Royal+Unisex+Salon+%26+Training+Academy%2C+near+Chakhu+Mandir%2C+Bafal+Marg%2C+Kathmandu%2C+Bagmati+Province+44600%2C+Nepal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-xs text-[#d4af37] hover:underline flex items-center gap-1 font-semibold"
+                  >
+                    <i class="fa-solid fa-diamond-turn-right"></i> Get Google
+                    Maps Directions
+                  </a>
+                </p>
+              </div>
+              <button
+                onclick="document.getElementById('navBookBtn').click()"
+                class="btn btn-primary btn-sm w-full mt-2"
+              >
+                <span>Book Appointment</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Bottom Footer Bar -->
+          <div
+            class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-400 gap-3"
+          >
+            <span
+              >© 2026 G2 Royal Unisex Salon &amp; Training Academy. All Rights
+              Reserved.</span
+            >
+            <div class="flex items-center gap-4 text-stone-400">
+              <span>near Chakhu Mandir, Bafal Marg, Kathmandu</span>
+              <span>•</span>
+              <a
+                href="tel:+9779742931920"
+                class="hover:text-[#d4af37] text-stone-400"
+                >974-2931920</a
+              >
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <!-- FLOATING BACK TO TOP BUTTON -->
+      <button
+        id="backToTopBtn"
+        class="fixed bottom-6 right-6 z-40 w-11 h-11 rounded-full bg-[#121316]/95 border border-[#d4af37]/60 text-[#d4af37] shadow-2xl flex items-center justify-center cursor-pointer transition-all duration-300 opacity-0 translate-y-4 pointer-events-none hover:bg-[#d4af37] hover:text-[#121316] hover:scale-110 group focus:outline-none"
+        aria-label="Back to top"
+      >
+        <i
+          class="fa-solid fa-arrow-up text-sm transition-transform group-hover:-translate-y-0.5"
+        ></i>
+      </button>
+    </div>
+    <!-- End Master Shell -->
+
+    <!-- APPOINTMENT RESERVATION MODAL (LIGHT MODE & WIDER ON DESKTOP) -->
+    <div
+      id="bookingModal"
+      class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden items-center justify-center p-4 transition-all duration-300"
+      role="dialog"
+      aria-modal="true"
+    >
+      <div
+        class="bg-white text-stone-900 w-full max-w-2xl lg:max-w-3xl rounded-2xl overflow-hidden shadow-2xl border border-stone-200 relative max-h-[92vh] flex flex-col"
+      >
+        <div
+          class="p-5 sm:p-6 border-b border-stone-200 flex items-center justify-between bg-stone-50 flex-none"
+        >
+          <div>
+            <h3 class="text-lg font-bold text-stone-900 m-0">
+              Direct Appointment &amp; Inquiry
+            </h3>
+            <p class="text-xs text-stone-500 m-0">
+              near Chakhu Mandir, Bafal Marg • Kathmandu
+            </p>
+          </div>
+          <button
+            id="closeBookingBtn"
+            aria-label="Close modal"
+            class="w-8 h-8 rounded-full bg-stone-200 hover:bg-stone-300 flex items-center justify-center text-stone-700 transition-colors cursor-pointer"
+          >
+            <i class="fa-solid fa-xmark text-sm"></i>
+          </button>
+        </div>
+
+        <form
+          id="bookingForm"
+          class="p-6 sm:p-8 space-y-4 text-sm overflow-y-auto"
+        >
+          <!-- Request Type Radio Toggle -->
+          <div>
+            <label class="block text-stone-800 text-sm font-semibold mb-2"
+              >Request Category *</label
+            >
+            <div class="grid grid-cols-2 gap-3">
+              <label
+                class="flex items-center gap-2 p-3 rounded-xl bg-stone-50 border border-stone-200 cursor-pointer hover:border-[#d4af37] transition-colors text-xs text-stone-800 font-medium"
+              >
+                <input
+                  type="radio"
+                  name="popupResType"
+                  value="salon"
+                  checked
+                  class="text-[#d4af37] focus:ring-0"
+                />
+                <span>Salon Service</span>
+              </label>
+              <label
+                class="flex items-center gap-2 p-3 rounded-xl bg-stone-50 border border-stone-200 cursor-pointer hover:border-[#d4af37] transition-colors text-xs text-stone-800 font-medium"
+              >
+                <input
+                  type="radio"
+                  name="popupResType"
+                  value="academy"
+                  class="text-[#d4af37] focus:ring-0"
+                />
+                <span>Academy Course Inquiry</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Client Name & Phone -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-stone-800 text-sm font-semibold mb-1.5"
+                >Full Name *</label
+              >
+              <input
+                type="text"
+                required
+                placeholder="e.g. Samir Shrestha"
+                class="w-full bg-stone-50 border border-stone-300 rounded-xl px-4 py-3 text-sm text-stone-900 min-h-[48px] focus:outline-none focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37]"
+              />
+            </div>
+            <div>
+              <label class="block text-stone-800 text-sm font-semibold mb-1.5"
+                >Phone Number *</label
+              >
+              <input
+                type="tel"
+                required
+                placeholder="e.g. 98XXXXXXXX or 97XXXXXXXX"
+                class="w-full bg-stone-50 border border-stone-300 rounded-xl px-4 py-3 text-sm text-stone-900 min-h-[48px] focus:outline-none focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37]"
+              />
+            </div>
+          </div>
+
+          <!-- Email Address -->
+          <div>
+            <label class="block text-stone-800 text-sm font-semibold mb-1.5"
+              >Email Address (Optional)</label
+            >
+            <input
+              type="email"
+              placeholder="e.g. samir@example.com"
+              class="w-full bg-stone-50 border border-stone-300 rounded-xl px-4 py-3 text-sm text-stone-900 min-h-[48px] focus:outline-none focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37]"
+            />
+          </div>
+
+          <!-- Requested Service / Course -->
+          <div>
+            <label class="block text-stone-800 text-sm font-semibold mb-1.5"
+              >Select Service or Training Course *</label
+            >
+            <select
+              id="bookingServiceSelect"
+              class="w-full bg-stone-50 border border-stone-300 rounded-xl px-4 py-3 text-sm text-stone-900 min-h-[48px] focus:outline-none focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37]"
+            >
+              <optgroup label="Salon Services">
+                <option value="Men's Haircut & Styling">
+                  Men's Haircut &amp; Styling
+                </option>
+                <option value="Beard Trim & Shave">
+                  Beard Trim &amp; Shave
+                </option>
+                <option value="Men's Haircut & Beard Trim Combo">
+                  Men's Haircut &amp; Beard Trim Combo
+                </option>
+                <option value="Women's Haircut & Blowdry">
+                  Women's Haircut &amp; Blowdry
+                </option>
+                <option value="Hair Smoothening">Hair Smoothening</option>
+                <option value="Hair Coloring & Highlights">
+                  Hair Coloring &amp; Highlights
+                </option>
+                <option value="Deep Conditioning Hair Spa">
+                  Deep Conditioning Hair Spa
+                </option>
+                <option value="Facial Clean-Up & Head Massage">
+                  Facial Clean-Up &amp; Head Massage
+                </option>
+                <option value="Party Hair Styling">Party Hair Styling</option>
+              </optgroup>
+              <optgroup label="Training Academy Courses">
+                <option value="Master Barbering Course">
+                  Master Barbering Course (12 Weeks)
+                </option>
+                <option value="Hair Styling & Beautician Course">
+                  Hair Styling &amp; Beautician Course (16 Weeks)
+                </option>
+                <option value="Basic Skin Care Course">
+                  Basic Skin Care &amp; Grooming (6 Weeks)
+                </option>
+                <option value="Academy Training Inquiry">
+                  General Training Course Information
+                </option>
+              </optgroup>
+            </select>
+          </div>
+
+          <!-- Date & Time -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-stone-800 text-sm font-semibold mb-1.5"
+                >Preferred Date *</label
+              >
+              <input
+                type="date"
+                required
+                class="w-full bg-stone-50 border border-stone-300 rounded-xl px-4 py-3 text-sm text-stone-900 min-h-[48px] focus:outline-none focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37]"
+              />
+            </div>
+            <div>
+              <label class="block text-stone-800 text-sm font-semibold mb-1.5"
+                >Preferred Time Window *</label
+              >
+              <select
+                class="w-full bg-stone-50 border border-stone-300 rounded-xl px-4 py-3 text-sm text-stone-900 min-h-[48px] focus:outline-none focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37]"
+              >
+                <option>Morning (7:00 AM â€“ 11:00 AM)</option>
+                <option>Afternoon (11:00 AM â€“ 4:00 PM)</option>
+                <option>Evening (4:00 PM â€“ 8:30 PM)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Notes -->
+          <div>
+            <label class="block text-stone-800 text-sm font-semibold mb-1.5"
+              >Special Notes / Questions (Optional)</label
+            >
+            <textarea
+              rows="3"
+              placeholder="e.g. Specific haircut style, previous hair treatments, or training batch questions..."
+              class="w-full bg-stone-50 border border-stone-300 rounded-xl px-4 py-3 text-sm text-stone-900 focus:outline-none focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37]"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-primary btn-block min-h-[48px] text-sm font-bold mt-3 shadow-md"
+          >
+            <span>Submit Appointment Request</span>
+            <i class="fa-solid fa-arrow-right text-xs ml-1"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- FLOATING WHATSAPP CHAT WIDGET -->
+    <div
+      id="whatsappChatBox"
+      class="wa-chat-box"
+      role="dialog"
+      aria-label="WhatsApp Chat"
+    >
+      <div
+        class="bg-[#25D366] text-white p-4 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-3">
+          <div
+            class="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center"
+          >
+            <i class="fa-brands fa-whatsapp text-xl"></i>
+          </div>
+          <div>
+            <h4 class="text-sm font-bold m-0 leading-tight">
+              Chat with G2 Royal
+            </h4>
+            <p class="text-[11px] text-white/85 m-0">Quick reply on WhatsApp</p>
+          </div>
+        </div>
+        <button
+          id="closeWhatsappChatBtn"
+          class="text-white/80 hover:text-white text-base cursor-pointer"
+          aria-label="Close chat"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <form
+        id="whatsappChatForm"
+        class="p-4 space-y-3 text-xs bg-white text-stone-900"
+      >
+        <div>
+          <label class="block font-semibold mb-1 text-stone-700"
+            >Your Full Name *</label
+          >
+          <input
+            type="text"
+            id="waName"
+            required
+            placeholder="e.g. Samir Shrestha"
+            class="w-full bg-stone-50 border border-stone-300 rounded-lg px-3 py-2 text-xs text-stone-900 focus:outline-none focus:border-[#25D366]"
+          />
+        </div>
+        <div>
+          <label class="block font-semibold mb-1 text-stone-700"
+            >Inquiry / Service *</label
+          >
+          <select
+            id="waService"
+            class="w-full bg-stone-50 border border-stone-300 rounded-lg px-3 py-2 text-xs text-stone-900 focus:outline-none focus:border-[#25D366]"
+          >
+            <option value="Men's Haircut & Styling">
+              Men's Haircut &amp; Styling
+            </option>
+            <option value="Beard Trim & Shave">Beard Trim &amp; Shave</option>
+            <option value="Women's Haircut & Blowdry">
+              Women's Haircut &amp; Blowdry
+            </option>
+            <option value="Hair Smoothening / Keratin">
+              Hair Smoothening / Keratin
+            </option>
+            <option value="Hair Coloring & Highlights">
+              Hair Coloring &amp; Highlights
+            </option>
+            <option value="Deep Conditioning Hair Spa">
+              Deep Conditioning Hair Spa
+            </option>
+            <option value="Facial Clean-Up & Head Massage">
+              Facial Clean-Up &amp; Head Massage
+            </option>
+            <option value="Master Barbering Course (Academy)">
+              Master Barbering Course (Academy)
+            </option>
+            <option value="Hair Styling & Beautician Course (Academy)">
+              Hair Styling &amp; Beautician Course (Academy)
+            </option>
+            <option value="Basic Skin Care Course (Academy)">
+              Basic Skin Care Course (Academy)
+            </option>
+            <option value="General Questions">General Questions</option>
+          </select>
+        </div>
+        <div>
+          <label class="block font-semibold mb-1 text-stone-700"
+            >Message / Preferred Time *</label
+          >
+          <textarea
+            id="waMessage"
+            required
+            rows="2"
+            placeholder="e.g. Looking to visit tomorrow around 4 PM..."
+            class="w-full bg-stone-50 border border-stone-300 rounded-lg px-3 py-2 text-xs text-stone-900 focus:outline-none focus:border-[#25D366]"
+          ></textarea>
+        </div>
+        <button
+          type="submit"
+          class="w-full bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold py-2.5 rounded-lg flex items-center justify-center gap-2 transition-colors cursor-pointer shadow-md"
+        >
+          <i class="fa-brands fa-whatsapp text-base"></i>
+          <span>Send Message to WhatsApp</span>
+        </button>
+      </form>
+    </div>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <button
+      id="whatsappChatBtn"
+      class="wa-float-btn"
+      aria-label="Chat on WhatsApp"
+    >
+      <span class="wa-float-pulse"></span>
+      <i class="fa-brands fa-whatsapp text-2xl"></i>
+    </button>
+
+    <!-- FULLSCREEN VIDEO STORY MODAL -->
+    <div
+      id="videoModal"
+      class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4 transition-all duration-300"
+      role="dialog"
+      aria-modal="true"
+    >
+      <div
+        class="relative w-full max-w-sm sm:max-w-md aspect-[9/16] max-h-[85vh] rounded-2xl overflow-hidden bg-black shadow-2xl border border-white/20 flex flex-col justify-between"
+      >
+        <video
+          id="modalVideoPlayer"
+          class="w-full h-full object-cover absolute inset-0 -z-10"
+          playsinline
+          preload="metadata"
+        >
+          <source src="assets/videos/hero_video_2.mp4" type="video/mp4" />
+        </video>
+
+        <div
+          class="p-4 flex items-center justify-between bg-gradient-to-b from-black/80 to-transparent"
+        >
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+            <span
+              id="modalVideoTitle"
+              class="text-xs font-bold text-white uppercase tracking-wider"
+              >Video Reel</span
+            >
+          </div>
+          <button
+            id="closeVideoModalBtn"
+            aria-label="Close video"
+            class="w-8 h-8 rounded-full bg-white/20 hover:bg-white/40 text-white flex items-center justify-center"
+          >
+            <i class="fa-solid fa-xmark text-sm"></i>
+          </button>
+        </div>
+
+        <div
+          class="p-4 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex items-center justify-between"
+        >
+          <button
+            id="modalPlayToggleBtn"
+            aria-label="Play/Pause"
+            class="text-white hover:text-[#d4af37]"
+          >
+            <i id="modalPlayIcon" class="fa-solid fa-pause text-lg"></i>
+          </button>
+          <button
+            id="modalMuteBtn"
+            aria-label="Mute/Unmute"
+            class="text-white hover:text-[#d4af37]"
+          >
+            <i id="modalMuteIcon" class="fa-solid fa-volume-high text-sm"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div
+      id="toastNotification"
+      class="ink-chrome fixed bottom-6 right-6 z-50 bg-[#121316] text-white border border-[#d4af37] px-4 py-3 rounded-md shadow-2xl transform translate-y-20 opacity-0 transition-all duration-300 flex items-center space-x-3 text-xs max-w-sm"
+    >
+      <i
+        id="toastIcon"
+        class="fa-solid fa-circle-check text-[#d4af37] text-base"
+      ></i>
+      <span id="toastMessage">Request submitted successfully.</span>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

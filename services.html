@@ -1,0 +1,1386 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | G2 Royal Unisex Salon Kathmandu</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { darkMode: "class" };
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome 6 Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="icon" type="image/png" href="logo.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Master Shell -->
+    <div class="w-full min-h-screen flex flex-col overflow-x-clip">
+      <!-- STICKY MASTER HEADER (ONLY NAV IS STICKY) -->
+      <header id="mainStickyHeader" class="w-full transition-all duration-300">
+        <!-- 1. UTILITY ANNOUNCEMENT BAR -->
+        <div
+          class="top-strip ink-chrome w-full bg-[#121316] text-[#94a3b8] text-xs py-2 border-b border-white/10 hidden sm:block"
+        >
+          <div
+            class="luxury-container flex flex-wrap items-center justify-between gap-3"
+          >
+            <div class="flex items-center space-x-2">
+              <i class="fa-regular fa-clock text-[#d4af37]"></i>
+              <span class="text-white/90 font-medium tracking-wide">
+                Open until 8:30 PM (Around 7:00 AM – 8:30 PM)
+                <span class="text-white/35 mx-1">|</span> near Chakhu Mandir,
+                Bafal Marg, Kathmandu
+              </span>
+            </div>
+
+            <div class="flex items-center space-x-6">
+              <button
+                id="openReservationHeaderBtn"
+                class="hover:text-white transition-colors flex items-center gap-1.5 group cursor-pointer"
+              >
+                <i
+                  class="fa-regular fa-calendar-check text-[#d4af37] group-hover:scale-110 transition-transform"
+                ></i>
+                <span class="text-white/90 group-hover:text-white font-medium"
+                  >Book Appointment</span
+                >
+              </button>
+              <a
+                href="tel:+9779742931920"
+                class="hover:text-[#d4af37] text-white/95 transition-colors font-semibold flex items-center gap-1.5"
+              >
+                <i class="fa-solid fa-phone text-[#d4af37] text-[11px]"></i>
+                <span>974-2931920</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. NAVBAR (STICKY) -->
+        <nav
+          class="site-nav sticky top-0 z-50 w-full border-b-2 border-[#d4af37]"
+        >
+          <div
+            class="luxury-container py-2.5 flex items-center justify-between"
+          >
+            <a
+              href="index.html"
+              class="flex items-center group py-1"
+              aria-label="G2 Royal Home"
+            >
+              <img
+                src="logo.png"
+                alt="G2 Royal Unisex Salon & Training Academy logo"
+                width="222"
+                height="168"
+                class="h-11 w-auto object-contain transition-transform group-hover:scale-105"
+              />
+            </a>
+
+            <div
+              class="site-nav-links hidden lg:flex items-center space-x-7 text-xs font-bold tracking-wider uppercase"
+            >
+              <a
+                href="index.html"
+                class="hover:text-[#b8891f] transition-colors py-1"
+                >Home</a
+              >
+              <a
+                href="about.html"
+                class="hover:text-[#b8891f] transition-colors py-1"
+                >About Us</a
+              >
+              <a
+                href="services.html"
+                class="text-[#d4af37] border-b-2 border-[#d4af37] py-1"
+                >Services</a
+              >
+              <a
+                href="academy.html"
+                class="hover:text-[#b8891f] transition-colors py-1"
+                >Academy</a
+              >
+              <a
+                href="gallery.html"
+                class="hover:text-[#b8891f] transition-colors py-1"
+                >Gallery</a
+              >
+              <a
+                href="contact.html"
+                class="hover:text-[#b8891f] transition-colors py-1"
+                >Contact &amp; Book</a
+              >
+            </div>
+
+            <div class="flex items-center space-x-3">
+              <button
+                id="themeToggle"
+                type="button"
+                aria-label="Switch to dark mode"
+                class="w-9 h-9 rounded-md border border-[#2a2e36] text-[#94a3b8] hover:text-[#d4af37] hover:border-[#d4af37] transition-colors flex items-center justify-center"
+              >
+                <i class="fa-solid fa-moon text-xs"></i>
+              </button>
+              <button id="navBookBtn" class="btn btn-primary btn-sm">
+                <span>Book Appointment</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+
+              <button
+                id="mobileMenuToggle"
+                class="lg:hidden w-9 h-9 rounded-md border flex items-center justify-center transition-colors"
+                aria-label="Toggle navigation"
+              >
+                <i class="fa-solid fa-bars-staggered text-base"></i>
+              </button>
+            </div>
+          </div>
+
+          <div
+            id="mobileMenu"
+            class="hidden lg:hidden border-b px-6 py-4 space-y-3 text-xs font-bold tracking-wider uppercase shadow-xl"
+          >
+            <a href="index.html" class="block py-1 hover:text-[#b8891f]"
+              >Home</a
+            >
+            <a href="about.html" class="block py-1 hover:text-[#b8891f]"
+              >About Us</a
+            >
+            <a href="services.html" class="block py-1 text-[#d4af37]"
+              >Services</a
+            >
+            <a href="academy.html" class="block py-1 hover:text-[#b8891f]"
+              >Academy</a
+            >
+            <a href="gallery.html" class="block py-1 hover:text-[#b8891f]"
+              >Gallery</a
+            >
+            <a href="contact.html" class="block py-1 hover:text-[#b8891f]"
+              >Contact &amp; Book</a
+            >
+          </div>
+        </nav>
+      </header>
+
+      <!-- REDESIGNED PAGE HERO (LEFT-ALIGNED) -->
+      <section class="page-hero section-dark orn-scissors">
+        <div class="luxury-container">
+          <!-- Breadcrumb -->
+          <nav aria-label="Breadcrumb" class="mb-4">
+            <ol class="flex items-center space-x-2 text-xs text-[#94a3b8]">
+              <li>
+                <a
+                  href="index.html"
+                  class="hover:text-[#d4af37] transition-colors"
+                  ><i class="fa-solid fa-house mr-1 text-[10px]"></i>Home</a
+                >
+              </li>
+              <li><span class="text-white/30">/</span></li>
+              <li class="text-[#d4af37] font-semibold">Salon Services</li>
+            </ol>
+          </nav>
+
+          <div class="section-head mb-0">
+            <p class="eyebrow">
+              <span class="eyebrow-num">01</span>
+              <span class="eyebrow-rule"></span>
+              Salon Services
+            </p>
+            <h1
+              class="hero-title text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#f8fafc] mb-4"
+            >
+              Everyday Salon Services <br class="hidden sm:inline" />
+              <span class="text-[#d4af37]">Hair, Beard &amp; Skin Care</span>
+            </h1>
+            <p
+              class="section-lede text-sm sm:text-base text-[#94a3b8] leading-relaxed m-0"
+            >
+              Complete grooming and beauty treatments for men and women at our
+              Bafal salon near Chakhu Mandir. From regular haircuts and straight
+              razor shaves to smoothening and skin cleansing.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES GRID SECTION -->
+      <section class="section section-light orn-comb">
+        <div class="luxury-container">
+          <!-- Category Filter Tabs -->
+          <div
+            class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-4 mb-8 border-b border-black/10 dark:border-white/10"
+          >
+            <button
+              class="service-tab-btn filter-btn is-active"
+              data-category="all"
+            >
+              All Services
+            </button>
+            <button class="service-tab-btn filter-btn" data-category="mens">
+              Men's Care
+            </button>
+            <button class="service-tab-btn filter-btn" data-category="womens">
+              Women's Hair
+            </button>
+            <button class="service-tab-btn filter-btn" data-category="color">
+              Color &amp; Texture
+            </button>
+            <button class="service-tab-btn filter-btn" data-category="skin">
+              Skin &amp; Scalp
+            </button>
+          </div>
+
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            id="servicesGrid"
+          >
+            <!-- Service 1: Men's Haircut -->
+            <div
+              class="card card-pad card-hover flex flex-col service-card"
+              data-service-type="mens"
+            >
+              <div class="media arch aspect-[16/10] mb-5">
+                <img
+                  src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80"
+                  alt="Men's Haircut and Styling"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <span
+                  class="text-xs font-bold text-[#b8891f] uppercase tracking-wider"
+                  >Men's Care • 30 Mins</span
+                >
+                <i class="fa-solid fa-scissors text-[#d4af37]"></i>
+              </div>
+              <h3 class="text-lg font-bold mb-2">
+                Men's Haircut &amp; Styling
+              </h3>
+              <p class="text-sm leading-relaxed mb-4 flex-1">
+                Classic scissor cuts, low fades, taper fades, or textured top
+                styling suited to your head shape and personal preference.
+              </p>
+              <div
+                class="space-y-1.5 text-xs mb-6 border-t border-black/10 dark:border-white/10 pt-3"
+              >
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-[#d4af37]"></i> Includes hair
+                  wash &amp; quick rinse
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-[#d4af37]"></i> Clean neck
+                  line and sideburn taper
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-[#d4af37]"></i> Final styling
+                  with wax or matte cream
+                </div>
+              </div>
+              <button
+                class="btn btn-outline btn-sm w-full book-service-btn mt-auto"
+                data-service="Men's Haircut & Styling"
+              >
+                Book Haircut
+              </button>
+            </div>
+
+            <!-- Service 2: Beard Grooming -->
+            <div
+              class="card card-pad card-hover flex flex-col service-card"
+              data-service-type="mens"
+            >
+              <div class="media arch aspect-[16/10] mb-5">
+                <img
+                  src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=80"
+                  alt="Beard Trim and Straight Razor Shave"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <span
+                  class="text-xs font-bold text-[#b8891f] uppercase tracking-wider"
+                  >Men's Care • 25 Mins</span
+                >
+                <i class="fa-solid fa-razor text-[#d4af37]"></i>
+              </div>
+              <h3 class="text-lg font-bold mb-2">
+                Beard Trim &amp; Straight Razor Shave
+              </h3>
+              <p class="text-sm leading-relaxed mb-4 flex-1">
+                Neat beard shaping, cheek line-up, mustache trimming, or full
+                smooth razor shave with warm towel and aftershave lotion.
+              </p>
+              <div
+                class="space-y-1.5 text-xs mb-6 border-t border-black/10 dark:border-white/10 pt-3"
+              >
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-[#d4af37]"></i> Fresh
+                  single-use blade for hygiene
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-[#d4af37]"></i> Warm towel
+                  steam to soften facial hair
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-[#d4af37]"></i> Soothing
+                  aftershave balm application
+                </div>
+              </div>
+              <button
+                class="btn btn-outline btn-sm w-full book-service-btn mt-auto"
+                data-service="Beard Trim & Shave"
+              >
+                Book Beard Grooming
+              </button>
+            </div>
+
+            <!-- Service 3: Women's Haircut -->
+            <div
+              class="card card-pad card-hover flex flex-col service-card"
+              data-service-type="womens"
+            >
+              <div class="media arch aspect-[16/10] mb-5">
+                <img
+                  src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80"
+                  alt="Women's Haircut and Blowdry"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <span
+                  class="text-xs font-bold text-[#b8891f] uppercase tracking-wider"
+                  >Women's Care • 45 Mins</span
+                >
+                <i class="fa-solid fa-wand-magic-sparkles text-[#d4af37]"></i>
+              </div>
+              <h3 class="text-lg font-bold mb-2">
+                Women's Haircut &amp; Blowdry
+              </h3>
+              <p class="text-sm leading-relaxed mb-4 flex-1">
+                Step layer cuts, feather cuts, bobs, blunt cuts, or split-end
+                straight trims followed by a blowdry style.
+              </p>
+              <div
+                class="space-y-1.5 text-xs mb-6 border-t border-black/10 dark:border-white/10 pt-3"
+              >
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-[#d4af37]"></i> Shampoo wash
+                  &amp; conditioning wash
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-[#d4af37]"></i> Layering
+                  matched to your hair density
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-[#d4af37]"></i> Round brush
+                  blowout finish
+                </div>
+              </div>
+              <button
+                class="btn btn-outline btn-sm w-full book-service-btn mt-auto"
+                data-service="Women's Haircut & Blowdry"
+              >
+                Book Women's Cut
+              </button>
+            </div>
+
+            <!-- Service 4: Hair Smoothening -->
+            <div
+              class="card card-pad card-hover flex flex-col service-card"
+              data-service-type="color"
+            >
+              <div class="media arch aspect-[16/10] mb-5">
+                <img
+                  src="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=800&q=80"
+                  alt="Hair Smoothening and Rebonding"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <span
+                  class="text-xs font-bold text-[#b8891f] uppercase tracking-wider"
+                  >Texture • 3 – 4 Hours</span
+                >
+                <i class="fa-solid fa-wind text-[#d4af37]"></i>
+              </div>
+              <h3 class="text-lg font-bold mb-2">
+                Hair Smoothening &amp; Rebonding
+              </h3>
+              <p class="text-sm leading-relaxed mb-4 flex-1">
+                Semi-permanent straight and silky hair finish that eliminates
+                daily frizz. Includes split-end trim and post-treatment
+                guidance.
+              </p>
+              <div
+                class="space-y-1.5 text-xs mb-6 border-t border-black/10 dark:border-white/10 pt-3"
+              >
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-[#d4af37]"></i> Gentle
+                  chemical softening &amp; flat ironing
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-[#d4af37]"></i> Neutralizing
+                  cream wash
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-[#d4af37]"></i> Advice on
+                  home shampoo maintenance
+                </div>
+              </div>
+              <button
+                class="btn btn-outline btn-sm w-full book-service-btn mt-auto"
+                data-service="Hair Smoothening"
+              >
+                Book Smoothening
+              </button>
+            </div>
+
+            <!-- Service 5: Hair Color & Highlights -->
+            <div
+              class="card card-pad card-hover flex flex-col service-card"
+              data-service-type="color"
+            >
+              <div class="media arch aspect-[16/10] mb-5">
+                <img
+                  src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80"
+                  alt="Hair Coloring and Highlights"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <span
+                  class="text-xs font-bold text-[#b8891f] uppercase tracking-wider"
+                  >Color • 90 – 150 Mins</span
+                >
+                <i class="fa-solid fa-palette text-[#d4af37]"></i>
+              </div>
+              <h3 class="text-lg font-bold mb-2">
+                Hair Coloring &amp; Highlights
+              </h3>
+              <p class="text-sm leading-relaxed mb-4 flex-1">
+                Global root touch-ups, natural brown/burgundy coverage, or
+                section highlights with post-color conditioning.
+              </p>
+              <div
+                class="space-y-1.5 text-xs mb-6 border-t border-black/10 dark:border-white/10 pt-3"
+              >
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-[#d4af37]"></i> Grey hair
+                  coverage or fashion shade
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-[#d4af37]"></i> Color-safe
+                  shampoo &amp; hair mask
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-[#d4af37]"></i> Final drying
+                  and styling
+                </div>
+              </div>
+              <button
+                class="btn btn-outline btn-sm w-full book-service-btn mt-auto"
+                data-service="Hair Coloring & Highlights"
+              >
+                Book Hair Color
+              </button>
+            </div>
+
+            <!-- Service 6: Hair Spa & Conditioning -->
+            <div
+              class="card card-pad card-hover flex flex-col service-card"
+              data-service-type="skin"
+            >
+              <div class="media arch aspect-[16/10] mb-5">
+                <img
+                  src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80"
+                  alt="Deep Conditioning Hair Spa"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <span
+                  class="text-xs font-bold text-[#b8891f] uppercase tracking-wider"
+                  >Hair Care • 50 Mins</span
+                >
+                <i class="fa-solid fa-droplet text-[#d4af37]"></i>
+              </div>
+              <h3 class="text-lg font-bold mb-2">Deep Conditioning Hair Spa</h3>
+              <p class="text-sm leading-relaxed mb-4 flex-1">
+                Moisturizing hair spa cream applied to scalp and strands with
+                relaxing head massage and warm towel steam to restore dry hair.
+              </p>
+              <div
+                class="space-y-1.5 text-xs mb-6 border-t border-black/10 dark:border-white/10 pt-3"
+              >
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-[#d4af37]"></i> Nourishing
+                  cream massage for 20 minutes
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-[#d4af37]"></i> Warm steam to
+                  open cuticles
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-[#d4af37]"></i> Clean rinse
+                  and soft blowdry
+                </div>
+              </div>
+              <button
+                class="btn btn-outline btn-sm w-full book-service-btn mt-auto"
+                data-service="Deep Conditioning Hair Spa"
+              >
+                Book Hair Spa
+              </button>
+            </div>
+
+            <!-- Service 7: Facial Clean-Up -->
+            <div
+              class="card card-pad card-hover flex flex-col service-card"
+              data-service-type="skin"
+            >
+              <div class="media arch aspect-[16/10] mb-5">
+                <img
+                  src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80"
+                  alt="Facial Clean-Up and Skin Care"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <span
+                  class="text-xs font-bold text-[#b8891f] uppercase tracking-wider"
+                  >Skin Care • 45 Mins</span
+                >
+                <i class="fa-solid fa-spa text-[#d4af37]"></i>
+              </div>
+              <h3 class="text-lg font-bold mb-2">
+                Facial Clean-Up &amp; Skin Care
+              </h3>
+              <p class="text-sm leading-relaxed mb-4 flex-1">
+                Face cleansing, scrub to remove dead cells, gentle blackhead
+                extraction, and a calming fruit or herbal face pack.
+              </p>
+              <div
+                class="space-y-1.5 text-xs mb-6 border-t border-black/10 dark:border-white/10 pt-3"
+              >
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-[#d4af37]"></i> Gentle face
+                  wash &amp; steam
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-[#d4af37]"></i> Blackhead and
+                  whitehead clearing
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-[#d4af37]"></i> Cooling face
+                  pack and moisturizer
+                </div>
+              </div>
+              <button
+                class="btn btn-outline btn-sm w-full book-service-btn mt-auto"
+                data-service="Facial Clean-Up"
+              >
+                Book Facial Clean-Up
+              </button>
+            </div>
+
+            <!-- Service 8: Head Massage -->
+            <div
+              class="card card-pad card-hover flex flex-col service-card"
+              data-service-type="skin"
+            >
+              <div class="media arch aspect-[16/10] mb-5">
+                <img
+                  src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80"
+                  alt="Relaxing Oil Head Massage"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <span
+                  class="text-xs font-bold text-[#b8891f] uppercase tracking-wider"
+                  >Relaxation • 30 Mins</span
+                >
+                <i class="fa-solid fa-hands text-[#d4af37]"></i>
+              </div>
+              <h3 class="text-lg font-bold mb-2">Relaxing Oil Head Massage</h3>
+              <p class="text-sm leading-relaxed mb-4 flex-1">
+                Traditional warm coconut, mustard, or herbal oil scalp massage
+                focused on pressure points to release headache and tension.
+              </p>
+              <div
+                class="space-y-1.5 text-xs mb-6 border-t border-black/10 dark:border-white/10 pt-3"
+              >
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-[#d4af37]"></i> Warm
+                  nourishing oil application
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-[#d4af37]"></i> Neck and
+                  upper shoulder massage
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-[#d4af37]"></i> Optional
+                  shampoo wash after session
+                </div>
+              </div>
+              <button
+                class="btn btn-outline btn-sm w-full book-service-btn mt-auto"
+                data-service="Oil Head Massage"
+              >
+                Book Head Massage
+              </button>
+            </div>
+
+            <!-- Service 9: Party Styling -->
+            <div
+              class="card card-pad card-hover flex flex-col service-card"
+              data-service-type="womens"
+            >
+              <div class="media arch aspect-[16/10] mb-5">
+                <img
+                  src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?auto=format&fit=crop&w=800&q=80"
+                  alt="Party Hair Styling and Curls"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <span
+                  class="text-xs font-bold text-[#b8891f] uppercase tracking-wider"
+                  >Styling • 45 Mins</span
+                >
+                <i class="fa-solid fa-gem text-[#d4af37]"></i>
+              </div>
+              <h3 class="text-lg font-bold mb-2">
+                Party Hair Styling &amp; Curls
+              </h3>
+              <p class="text-sm leading-relaxed mb-4 flex-1">
+                Iron curls, straight blowout, half-up styles, or neat party buns
+                suitable for family functions, festivals, and weddings.
+              </p>
+              <div
+                class="space-y-1.5 text-xs mb-6 border-t border-black/10 dark:border-white/10 pt-3"
+              >
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-[#d4af37]"></i> Curling wand
+                  or flat iron setting
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-[#d4af37]"></i> Holding spray
+                  for long-lasting wear
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-[#d4af37]"></i> Pinning
+                  assistance for festive outfits
+                </div>
+              </div>
+              <button
+                class="btn btn-outline btn-sm w-full book-service-btn mt-auto"
+                data-service="Party Hair Styling"
+              >
+                Book Party Styling
+              </button>
+            </div>
+          </div>
+
+          <!-- Luxury Pagination -->
+          <div class="luxury-pagination">
+            <button
+              class="page-btn page-btn-prev"
+              disabled
+              aria-label="Previous Page"
+            >
+              <i class="fa-solid fa-chevron-left text-xs"></i>
+              <span class="hidden sm:inline">Prev</span>
+            </button>
+            <button class="page-btn page-btn-num active">1</button>
+            <button class="page-btn page-btn-num">2</button>
+            <button class="page-btn page-btn-num">3</button>
+            <button class="page-btn page-btn-next" aria-label="Next Page">
+              <span class="hidden sm:inline">Next</span>
+              <i class="fa-solid fa-chevron-right text-xs"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ ACCORDION -->
+      <section class="section section-dark orn-spray">
+        <div class="luxury-container">
+          <div class="section-head text-center max-w-2xl mx-auto mb-10">
+            <p class="eyebrow justify-center">
+              <span class="eyebrow-num">03</span>
+              <span class="eyebrow-rule"></span>
+              Frequently Asked Questions
+            </p>
+            <h2 class="section-title">Common Questions About Services</h2>
+            <p class="section-lede mx-auto">
+              Simple details on bookings, appointments, and salon timings.
+            </p>
+          </div>
+
+          <div class="faq-accordion">
+            <!-- FAQ 1 -->
+            <div class="faq-item">
+              <button type="button" class="faq-question">
+                <span>Do I need to book an appointment before visiting?</span>
+                <i class="fa-solid fa-chevron-down faq-icon"></i>
+              </button>
+              <div class="faq-answer">
+                Walk-ins are always welcome at G2 Royal. However, for
+                time-consuming services like hair smoothening, coloring, or
+                during busy evening hours, calling ahead at 974-2931920 helps
+                minimize your wait time.
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="faq-item">
+              <button type="button" class="faq-question">
+                <span>What are your salon operating hours?</span>
+                <i class="fa-solid fa-chevron-down faq-icon"></i>
+              </button>
+              <div class="faq-answer">
+                We are open until 8:30 PM (Around 7:00 AM – 8:30 PM most days).
+                We operate 7 days a week to accommodate work schedules and
+                student routines.
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="faq-item">
+              <button type="button" class="faq-question">
+                <span>Where is the salon located?</span>
+                <i class="fa-solid fa-chevron-down faq-icon"></i>
+              </button>
+              <div class="faq-answer">
+                We are situated near Chakhu Mandir on Bafal Marg in Kathmandu,
+                easily accessible from Kalanki Chowk, Sitapaila, Swoyambhu, and
+                Balkhu.
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="faq-item">
+              <button type="button" class="faq-question">
+                <span>What payment methods do you accept?</span>
+                <i class="fa-solid fa-chevron-down faq-icon"></i>
+              </button>
+              <div class="faq-answer">
+                We accept cash as well as mobile digital payments including
+                Fonepay QR, eSewa, and bank transfers.
+              </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="faq-item">
+              <button type="button" class="faq-question">
+                <span>Where can I learn about your vocational courses?</span>
+                <i class="fa-solid fa-chevron-down faq-icon"></i>
+              </button>
+              <div class="faq-answer">
+                All details regarding our 12-week Master Barbering, 16-week Hair
+                Styling &amp; Beautician, and 6-week Skin Care courses are
+                available on our dedicated
+                <a
+                  href="academy.html"
+                  class="text-[#d4af37] underline font-bold"
+                  >Academy Page</a
+                >.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer
+        id="mainFooter"
+        class="bg-[#0b0c0e] text-white pt-14 pb-8 border-t border-[#d4af37]/30"
+      >
+        <div class="luxury-container">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pb-12 border-b border-white/10"
+          >
+            <!-- Col 1: Brand Info -->
+            <div class="lg:col-span-4 space-y-4">
+              <div class="flex items-center space-x-3">
+                <img
+                  src="logo.png"
+                  alt="G2 Royal Crest"
+                  width="48"
+                  height="48"
+                  class="h-10 w-auto object-contain"
+                />
+                <div>
+                  <span
+                    class="font-slab font-bold text-xl text-[#d4af37] block leading-tight"
+                    >G2 Royal Unisex</span
+                  >
+                  <span
+                    class="text-xs text-stone-300 uppercase tracking-wider font-medium"
+                    >Salon &amp; Training Academy</span
+                  >
+                </div>
+              </div>
+              <p class="text-sm text-stone-300 leading-relaxed max-w-sm m-0">
+                A beauty salon and practical skills-training business in Bafal,
+                Kathmandu. Providing everyday hair, beard, skin services and
+                hands-on vocational courses.
+              </p>
+              <div class="flex items-center gap-2.5 pt-1">
+                <a
+                  href="#"
+                  class="w-8 h-8 rounded-lg bg-white/10 hover:bg-[#d4af37] hover:text-[#121316] text-white flex items-center justify-center text-xs transition-colors"
+                  aria-label="Facebook"
+                  ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+                <a
+                  href="#"
+                  class="w-8 h-8 rounded-lg bg-white/10 hover:bg-[#d4af37] hover:text-[#121316] text-white flex items-center justify-center text-xs transition-colors"
+                  aria-label="Instagram"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+                <a
+                  href="#"
+                  class="w-8 h-8 rounded-lg bg-white/10 hover:bg-[#d4af37] hover:text-[#121316] text-white flex items-center justify-center text-xs transition-colors"
+                  aria-label="YouTube"
+                  ><i class="fa-brands fa-youtube"></i
+                ></a>
+                <a
+                  href="#"
+                  class="w-8 h-8 rounded-lg bg-white/10 hover:bg-[#d4af37] hover:text-[#121316] text-white flex items-center justify-center text-xs transition-colors"
+                  aria-label="TikTok"
+                  ><i class="fa-brands fa-tiktok"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- Col 2: Salon Services -->
+            <div class="lg:col-span-2 space-y-3">
+              <h4
+                class="font-slab text-sm font-bold text-white uppercase tracking-wider m-0"
+              >
+                Salon Services
+              </h4>
+              <ul class="space-y-2 text-sm text-stone-300 list-none p-0 m-0">
+                <li>
+                  <a
+                    href="services.html"
+                    class="hover:text-[#d4af37] transition-colors"
+                    >Haircuts &amp; Styling</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="services.html"
+                    class="hover:text-[#d4af37] transition-colors"
+                    >Beard Trim &amp; Shaving</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="services.html"
+                    class="hover:text-[#d4af37] transition-colors"
+                    >Hair Smoothening</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="services.html"
+                    class="hover:text-[#d4af37] transition-colors"
+                    >Facials &amp; Clean-Up</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Col 3: Quick Links -->
+            <div class="lg:col-span-3 space-y-3">
+              <h4
+                class="font-slab text-sm font-bold text-white uppercase tracking-wider m-0"
+              >
+                Quick Links
+              </h4>
+              <ul class="space-y-2 text-sm text-stone-300 list-none p-0 m-0">
+                <li>
+                  <a
+                    href="about.html"
+                    class="hover:text-[#d4af37] transition-colors"
+                    >About Our Salon</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="academy.html"
+                    class="hover:text-[#d4af37] transition-colors"
+                    >Training Academy</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="gallery.html"
+                    class="hover:text-[#d4af37] transition-colors"
+                    >Photo Gallery</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="contact.html"
+                    class="hover:text-[#d4af37] transition-colors"
+                    >Find Location &amp; Map</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="contact.html"
+                    class="hover:text-[#d4af37] transition-colors"
+                    >Book an Appointment</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Col 4: Contact & Hours -->
+            <div class="lg:col-span-3 space-y-3">
+              <h4
+                class="font-slab text-sm font-bold text-white uppercase tracking-wider m-0"
+              >
+                Visit &amp; Contact
+              </h4>
+              <div class="space-y-2 text-sm text-stone-300">
+                <p class="m-0 leading-relaxed text-white">
+                  <i class="fa-solid fa-location-dot text-[#d4af37] mr-1.5"></i>
+                  near Chakhu Mandir, Bafal Marg, Kathmandu
+                </p>
+                <p class="m-0 text-stone-300">
+                  <i class="fa-solid fa-phone text-[#d4af37] mr-1.5"></i>
+                  <a
+                    href="tel:+9779742931920"
+                    class="hover:text-[#d4af37] text-white font-medium"
+                    >974-2931920</a
+                  >
+                </p>
+                <p class="m-0 text-stone-300 pt-1">
+                  <i class="fa-regular fa-clock text-[#d4af37] mr-1.5"></i>
+                  Open until 8:30 PM (Around 7:00 AM – 8:30 PM)
+                </p>
+                <p class="m-0 pt-1">
+                  <a
+                    href="https://www.google.com/maps/dir/?api=1&destination=G2+Royal+Unisex+Salon+%26+Training+Academy%2C+near+Chakhu+Mandir%2C+Bafal+Marg%2C+Kathmandu%2C+Bagmati+Province+44600%2C+Nepal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-xs text-[#d4af37] hover:underline flex items-center gap-1 font-semibold"
+                  >
+                    <i class="fa-solid fa-diamond-turn-right"></i> Get Google
+                    Maps Directions
+                  </a>
+                </p>
+              </div>
+              <button
+                onclick="document.getElementById('navBookBtn').click()"
+                class="btn btn-primary btn-sm w-full mt-2"
+              >
+                <span>Book Appointment</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Bottom Footer Bar -->
+          <div
+            class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-400 gap-3"
+          >
+            <span
+              >© 2026 G2 Royal Unisex Salon &amp; Training Academy. All Rights
+              Reserved.</span
+            >
+            <div class="flex items-center gap-4 text-stone-400">
+              <span>near Chakhu Mandir, Bafal Marg, Kathmandu</span>
+              <span>•</span>
+              <a
+                href="tel:+9779742931920"
+                class="hover:text-[#d4af37] text-stone-400"
+                >974-2931920</a
+              >
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <!-- FLOATING BACK TO TOP BUTTON -->
+      <button
+        id="backToTopBtn"
+        class="fixed bottom-6 right-6 z-40 w-11 h-11 rounded-full bg-[#121316]/95 border border-[#d4af37]/60 text-[#d4af37] shadow-2xl flex items-center justify-center cursor-pointer transition-all duration-300 opacity-0 translate-y-4 pointer-events-none hover:bg-[#d4af37] hover:text-[#121316] hover:scale-110 group focus:outline-none"
+        aria-label="Back to top"
+      >
+        <i
+          class="fa-solid fa-arrow-up text-sm transition-transform group-hover:-translate-y-0.5"
+        ></i>
+      </button>
+    </div>
+    <!-- End Master Shell -->
+
+    <!-- APPOINTMENT RESERVATION MODAL (LIGHT MODE & WIDER ON DESKTOP) -->
+    <div
+      id="bookingModal"
+      class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden items-center justify-center p-4 transition-all duration-300"
+      role="dialog"
+      aria-modal="true"
+    >
+      <div
+        class="bg-white text-stone-900 w-full max-w-2xl lg:max-w-3xl rounded-2xl overflow-hidden shadow-2xl border border-stone-200 relative max-h-[92vh] flex flex-col"
+      >
+        <div
+          class="p-5 sm:p-6 border-b border-stone-200 flex items-center justify-between bg-stone-50 flex-none"
+        >
+          <div>
+            <h3 class="text-lg font-bold text-stone-900 m-0">
+              Direct Appointment &amp; Inquiry
+            </h3>
+            <p class="text-xs text-stone-500 m-0">
+              near Chakhu Mandir, Bafal Marg • Kathmandu
+            </p>
+          </div>
+          <button
+            id="closeBookingBtn"
+            aria-label="Close modal"
+            class="w-8 h-8 rounded-full bg-stone-200 hover:bg-stone-300 flex items-center justify-center text-stone-700 transition-colors cursor-pointer"
+          >
+            <i class="fa-solid fa-xmark text-sm"></i>
+          </button>
+        </div>
+
+        <form
+          id="bookingForm"
+          class="p-6 sm:p-8 space-y-4 text-sm overflow-y-auto"
+        >
+          <!-- Request Type Radio Toggle -->
+          <div>
+            <label class="block text-stone-800 text-sm font-semibold mb-2"
+              >Request Category *</label
+            >
+            <div class="grid grid-cols-2 gap-3">
+              <label
+                class="flex items-center gap-2 p-3 rounded-xl bg-stone-50 border border-stone-200 cursor-pointer hover:border-[#d4af37] transition-colors text-xs text-stone-800 font-medium"
+              >
+                <input
+                  type="radio"
+                  name="popupResType"
+                  value="salon"
+                  checked
+                  class="text-[#d4af37] focus:ring-0"
+                />
+                <span>Salon Service</span>
+              </label>
+              <label
+                class="flex items-center gap-2 p-3 rounded-xl bg-stone-50 border border-stone-200 cursor-pointer hover:border-[#d4af37] transition-colors text-xs text-stone-800 font-medium"
+              >
+                <input
+                  type="radio"
+                  name="popupResType"
+                  value="academy"
+                  class="text-[#d4af37] focus:ring-0"
+                />
+                <span>Academy Course Inquiry</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Client Name & Phone -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-stone-800 text-sm font-semibold mb-1.5"
+                >Full Name *</label
+              >
+              <input
+                type="text"
+                required
+                placeholder="e.g. Samir Shrestha"
+                class="w-full bg-stone-50 border border-stone-300 rounded-xl px-4 py-3 text-sm text-stone-900 min-h-[48px] focus:outline-none focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37]"
+              />
+            </div>
+            <div>
+              <label class="block text-stone-800 text-sm font-semibold mb-1.5"
+                >Phone Number *</label
+              >
+              <input
+                type="tel"
+                required
+                placeholder="e.g. 98XXXXXXXX or 97XXXXXXXX"
+                class="w-full bg-stone-50 border border-stone-300 rounded-xl px-4 py-3 text-sm text-stone-900 min-h-[48px] focus:outline-none focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37]"
+              />
+            </div>
+          </div>
+
+          <!-- Email Address -->
+          <div>
+            <label class="block text-stone-800 text-sm font-semibold mb-1.5"
+              >Email Address (Optional)</label
+            >
+            <input
+              type="email"
+              placeholder="e.g. samir@example.com"
+              class="w-full bg-stone-50 border border-stone-300 rounded-xl px-4 py-3 text-sm text-stone-900 min-h-[48px] focus:outline-none focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37]"
+            />
+          </div>
+
+          <!-- Requested Service / Course -->
+          <div>
+            <label class="block text-stone-800 text-sm font-semibold mb-1.5"
+              >Select Service or Training Course *</label
+            >
+            <select
+              id="bookingServiceSelect"
+              class="w-full bg-stone-50 border border-stone-300 rounded-xl px-4 py-3 text-sm text-stone-900 min-h-[48px] focus:outline-none focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37]"
+            >
+              <optgroup label="Salon Services">
+                <option value="Men's Haircut & Styling">
+                  Men's Haircut &amp; Styling
+                </option>
+                <option value="Beard Trim & Shave">
+                  Beard Trim &amp; Shave
+                </option>
+                <option value="Men's Haircut & Beard Trim Combo">
+                  Men's Haircut &amp; Beard Trim Combo
+                </option>
+                <option value="Women's Haircut & Blowdry">
+                  Women's Haircut &amp; Blowdry
+                </option>
+                <option value="Hair Smoothening">Hair Smoothening</option>
+                <option value="Hair Coloring & Highlights">
+                  Hair Coloring &amp; Highlights
+                </option>
+                <option value="Deep Conditioning Hair Spa">
+                  Deep Conditioning Hair Spa
+                </option>
+                <option value="Facial Clean-Up & Head Massage">
+                  Facial Clean-Up &amp; Head Massage
+                </option>
+                <option value="Party Hair Styling">Party Hair Styling</option>
+              </optgroup>
+              <optgroup label="Training Academy Courses">
+                <option value="Master Barbering Course">
+                  Master Barbering Course (12 Weeks)
+                </option>
+                <option value="Hair Styling & Beautician Course">
+                  Hair Styling &amp; Beautician Course (16 Weeks)
+                </option>
+                <option value="Basic Skin Care Course">
+                  Basic Skin Care &amp; Grooming (6 Weeks)
+                </option>
+                <option value="Academy Training Inquiry">
+                  General Training Course Information
+                </option>
+              </optgroup>
+            </select>
+          </div>
+
+          <!-- Date & Time -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-stone-800 text-sm font-semibold mb-1.5"
+                >Preferred Date *</label
+              >
+              <input
+                type="date"
+                required
+                class="w-full bg-stone-50 border border-stone-300 rounded-xl px-4 py-3 text-sm text-stone-900 min-h-[48px] focus:outline-none focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37]"
+              />
+            </div>
+            <div>
+              <label class="block text-stone-800 text-sm font-semibold mb-1.5"
+                >Preferred Time Window *</label
+              >
+              <select
+                class="w-full bg-stone-50 border border-stone-300 rounded-xl px-4 py-3 text-sm text-stone-900 min-h-[48px] focus:outline-none focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37]"
+              >
+                <option>Morning (7:00 AM – 11:00 AM)</option>
+                <option>Afternoon (11:00 AM – 4:00 PM)</option>
+                <option>Evening (4:00 PM – 8:30 PM)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Notes -->
+          <div>
+            <label class="block text-stone-800 text-sm font-semibold mb-1.5"
+              >Special Notes / Questions (Optional)</label
+            >
+            <textarea
+              rows="3"
+              placeholder="e.g. Specific haircut style, previous hair treatments, or training batch questions..."
+              class="w-full bg-stone-50 border border-stone-300 rounded-xl px-4 py-3 text-sm text-stone-900 focus:outline-none focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37]"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-primary btn-block min-h-[48px] text-sm font-bold mt-3 shadow-md"
+          >
+            <span>Submit Appointment Request</span>
+            <i class="fa-solid fa-arrow-right text-xs ml-1"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- FLOATING WHATSAPP CHAT WIDGET -->
+    <div
+      id="whatsappChatBox"
+      class="wa-chat-box"
+      role="dialog"
+      aria-label="WhatsApp Chat"
+    >
+      <div
+        class="bg-[#25D366] text-white p-4 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-3">
+          <div
+            class="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center"
+          >
+            <i class="fa-brands fa-whatsapp text-xl"></i>
+          </div>
+          <div>
+            <h4 class="text-sm font-bold m-0 leading-tight">
+              Chat with G2 Royal
+            </h4>
+            <p class="text-[11px] text-white/85 m-0">Quick reply on WhatsApp</p>
+          </div>
+        </div>
+        <button
+          id="closeWhatsappChatBtn"
+          class="text-white/80 hover:text-white text-base cursor-pointer"
+          aria-label="Close chat"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <form
+        id="whatsappChatForm"
+        class="p-4 space-y-3 text-xs bg-white text-stone-900"
+      >
+        <div>
+          <label class="block font-semibold mb-1 text-stone-700"
+            >Your Full Name *</label
+          >
+          <input
+            type="text"
+            id="waName"
+            required
+            placeholder="e.g. Samir Shrestha"
+            class="w-full bg-stone-50 border border-stone-300 rounded-lg px-3 py-2 text-xs text-stone-900 focus:outline-none focus:border-[#25D366]"
+          />
+        </div>
+        <div>
+          <label class="block font-semibold mb-1 text-stone-700"
+            >Inquiry / Service *</label
+          >
+          <select
+            id="waService"
+            class="w-full bg-stone-50 border border-stone-300 rounded-lg px-3 py-2 text-xs text-stone-900 focus:outline-none focus:border-[#25D366]"
+          >
+            <option value="Men's Haircut & Styling">
+              Men's Haircut &amp; Styling
+            </option>
+            <option value="Beard Trim & Shave">Beard Trim &amp; Shave</option>
+            <option value="Women's Haircut & Blowdry">
+              Women's Haircut &amp; Blowdry
+            </option>
+            <option value="Hair Smoothening / Keratin">
+              Hair Smoothening / Keratin
+            </option>
+            <option value="Hair Coloring & Highlights">
+              Hair Coloring &amp; Highlights
+            </option>
+            <option value="Deep Conditioning Hair Spa">
+              Deep Conditioning Hair Spa
+            </option>
+            <option value="Facial Clean-Up & Head Massage">
+              Facial Clean-Up &amp; Head Massage
+            </option>
+            <option value="Master Barbering Course (Academy)">
+              Master Barbering Course (Academy)
+            </option>
+            <option value="Hair Styling & Beautician Course (Academy)">
+              Hair Styling &amp; Beautician Course (Academy)
+            </option>
+            <option value="Basic Skin Care Course (Academy)">
+              Basic Skin Care Course (Academy)
+            </option>
+            <option value="General Questions">General Questions</option>
+          </select>
+        </div>
+        <div>
+          <label class="block font-semibold mb-1 text-stone-700"
+            >Message / Preferred Time *</label
+          >
+          <textarea
+            id="waMessage"
+            required
+            rows="2"
+            placeholder="e.g. Looking to visit tomorrow around 4 PM..."
+            class="w-full bg-stone-50 border border-stone-300 rounded-lg px-3 py-2 text-xs text-stone-900 focus:outline-none focus:border-[#25D366]"
+          ></textarea>
+        </div>
+        <button
+          type="submit"
+          class="w-full bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold py-2.5 rounded-lg flex items-center justify-center gap-2 transition-colors cursor-pointer shadow-md"
+        >
+          <i class="fa-brands fa-whatsapp text-base"></i>
+          <span>Send Message to WhatsApp</span>
+        </button>
+      </form>
+    </div>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <button
+      id="whatsappChatBtn"
+      class="wa-float-btn"
+      aria-label="Chat on WhatsApp"
+    >
+      <span class="wa-float-pulse"></span>
+      <i class="fa-brands fa-whatsapp text-2xl"></i>
+    </button>
+
+    <!-- TOAST NOTIFICATION -->
+    <div
+      id="toastNotification"
+      class="ink-chrome fixed bottom-6 right-6 z-50 bg-[#121316] text-white border border-[#d4af37] px-4 py-3 rounded-md shadow-2xl transform translate-y-20 opacity-0 transition-all duration-300 flex items-center space-x-3 text-xs max-w-sm"
+    >
+      <i
+        id="toastIcon"
+        class="fa-solid fa-circle-check text-[#d4af37] text-base"
+      ></i>
+      <span id="toastMessage">Request submitted successfully.</span>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
