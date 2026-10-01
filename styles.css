@@ -1673,16 +1673,10 @@ input:focus, select:focus, textarea:focus {
 #mainStickyHeader {
   position: static !important;
   box-shadow: none !important;
-  /* Reserve space for the fixed nav below the top-strip */
-  padding-bottom: 64px;
+  padding-bottom: 0;
 }
 
-/* On mobile (no top-strip shown), adjust slightly */
-@media (max-width: 640px) {
-  #mainStickyHeader {
-    padding-bottom: 60px;
-  }
-}
+
 
 /* Page hero sections: add extra top padding to not hide under nav */
 .page-hero {
