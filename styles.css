@@ -1670,21 +1670,19 @@ input:focus, select:focus, textarea:focus {
 
 
 /* ==========================================================================
-   HEADER HEIGHT INCREASE
+   HEADER HEIGHT ADJUSTMENT
    ========================================================================== */
-/* Increase top-strip height */
+/* Top-strip - moderate height */
 .top-strip {
-  padding-top: 0.75rem;   /* py-3 = 12px */
+  padding-top: 0.5rem;   /* py-2 = 8px */
+  padding-bottom: 0.5rem;
+}
+
+/* Nav - moderate height */
+.site-nav {
+  padding-top: 0.75rem;  /* py-3 = 12px */
   padding-bottom: 0.75rem;
 }
-
-/* Increase nav height */
-.site-nav {
-  padding-top: 1rem;      /* py-4 = 16px */
-  padding-bottom: 1rem;
-}
-
-/* Ensure fixed nav at top:0 still aligns - push content down via padding */
 
 /* ==========================================================================
    STICKY HEADER & BACK-TO-TOP ENHANCEMENTS
