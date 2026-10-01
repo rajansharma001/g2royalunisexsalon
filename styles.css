@@ -1628,29 +1628,32 @@ input:focus, select:focus, textarea:focus {
 
 
 
+
+
 /* ==========================================================================
-   HEADER-HERO GAP FIX
+   HERO SECTION GAP FIX - Floating elements & border
    ========================================================================== */
-/* Header padding matches fixed nav height exactly */
-#mainStickyHeader {
-  padding-bottom: 74px;
-}
-@media (max-width: 640px) {
-  #mainStickyHeader {
-    padding-bottom: 70px;
-  }
+/* Remove border from hero section to eliminate faint white line */
+#hero.section {
+  border-bottom: none;
 }
 
-/* First section after header (hero) - no extra top padding */
-#mainStickyHeader + section:first-of-type,
-header + section:first-of-type {
-  padding-top: 0 !important;
+/* Ensure hero floating elements don't create layout gaps */
+#hero .hero-float-secondary,
+#hero .hero-seal-float {
+  pointer-events: none;
 }
 
-/* Page hero on other pages */
-.page-hero {
-  padding-top: 0 !important;
+/* Tighten hero section bottom padding - the floating elements extend beyond */
+#hero.section {
+  padding-bottom: clamp(2rem, 5vw, 4rem);
 }
+
+/* Next section after hero - remove extra top margin if present */
+#hero + .section {
+  margin-top: 0;
+}
+
 
 /* ==========================================================================
    STICKY HEADER & BACK-TO-TOP ENHANCEMENTS
